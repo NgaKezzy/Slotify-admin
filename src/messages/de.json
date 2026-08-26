@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "Slotify",
+    "tagline": "Spa & salon booking admin"
+  },
+  "common": {
+    "loading": "Loading...",
+    "comingSoon": "This module is planned for a later phase.",
+    "language": "Language",
+    "locale": {
+      "en": "English",
+      "de": "German"
+    }
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in",
+      "description": "Enter your credentials to access the admin panel.",
+      "email": "Email",
+      "emailPlaceholder": "owner@demo.com",
+      "password": "Password",
+      "submit": "Sign in",
+      "submitting": "Signing in...",
+      "errors": {
+        "invalidCredentials": "Invalid email or password.",
+        "unavailable": "The server is unavailable. Please try again later.",
+        "invalidEmail": "Enter a valid email address.",
+        "passwordRequired": "Password is required."
+      }
+    },
+    "logout": "Sign out"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "bookings": "Bookings",
+    "calendar": "Calendar",
+    "staff": "Staff",
+    "services": "Services",
+    "customers": "Customers",
+    "promotions": "Promotions",
+    "reviews": "Reviews",
+    "payments": "Payments",
+    "reports": "Reports",
+    "settings": "Settings",
+    "platform": "Platform",
+    "groups": {
+      "salon": "Salon",
+      "management": "Management",
+      "admin": "Administration"
+    },
+    "toggleSidebar": "Toggle sidebar"
+  },
+  "salonSwitcher": {
+    "label": "Current salon",
+    "placeholder": "Select salon",
+    "demoSalon": "Demo Salon"
+  },
+  "userMenu": {
+    "open": "Open user menu",
+    "profile": "Profile",
+    "guest": "Guest"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "description": "Overview of today's activity across your salon.",
+    "kpi": {
+      "bookingsToday": "Bookings today",
+      "revenueToday": "Revenue today",
+      "newCustomers": "New customers",
+      "pendingBookings": "Pending bookings"
+    }
+  },
+  "modules": {
+    "bookings": {
+      "title": "Bookings",
+      "description": "List, calendar view and booking details with confirm, reject and reschedule actions."
+    },
+    "calendar": {
+      "title": "Calendar",
+      "description": "Timeline per staff member with drag-and-drop rescheduling."
+    },
+    "staff": {
+      "title": "Staff",
+      "description": "Staff list, weekly shifts editor and time-off management."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Categories and services with pricing, duration and ordering."
+    },
+    "customers": {
+      "title": "Customers",
+      "description": "CRM list with history, notes, tags and lifetime value."
+    },
+    "promotions": {
+      "title": "Promotions",
+      "description": "Coupons and discount campaigns."
+    },
+    "reviews": {
+      "title": "Reviews",
+      "description": "Customer reviews with owner replies."
+    },
+    "payments": {
+      "title": "Payments",
+      "description": "Transactions and refunds."
+    },
+    "reports": {
+      "title": "Reports",
+      "description": "Revenue, bookings and staff performance with Excel/PDF export."
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Salon profile, opening hours, booking rules, images and payment methods."
+    },
+    "platform": {
+      "title": "Platform",
+      "description": "Super admin area: salon approval, users, categories and platform settings."
+    }
+  }
+}
