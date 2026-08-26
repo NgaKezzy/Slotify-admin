@@ -53,13 +53,13 @@ export interface components {
       refreshToken: string;
       user: components["schemas"]["UserSummary"];
     };
-    /** Standard envelope: `code` is "OK" on success, otherwise an ErrorCode name. */
+    /** Standard envelope: `code` is 1000 on success, otherwise a numeric ErrorCode (1xxx auth, 2xxx not found, 3xxx bad request, 4xxx conflict, 5xxx payment, 9xxx system). */
     ApiResponseAuthResponse: {
       success: boolean;
-      code: string;
+      code: number;
       message?: string;
       data: components["schemas"]["AuthResponse"];
-      errors?: { field?: string; code: string; message: string }[];
+      errors?: { field?: string; code: number; message: string }[];
     };
     Booking: {
       id: number;
