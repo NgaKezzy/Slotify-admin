@@ -53,7 +53,14 @@ export interface components {
       refreshToken: string;
       user: components["schemas"]["UserSummary"];
     };
-    ApiResponseAuthResponse: { data: components["schemas"]["AuthResponse"] };
+    /** Standard envelope: `code` is "OK" on success, otherwise an ErrorCode name. */
+    ApiResponseAuthResponse: {
+      success: boolean;
+      code: string;
+      message?: string;
+      data: components["schemas"]["AuthResponse"];
+      errors?: { field?: string; code: string; message: string }[];
+    };
     Booking: {
       id: number;
       status: "PENDING" | "CONFIRMED" | "COMPLETED" | "CANCELLED" | "REJECTED" | "NO_SHOW";
