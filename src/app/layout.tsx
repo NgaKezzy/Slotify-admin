@@ -5,6 +5,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { getLocale, getMessages, getTimeZone, getTranslations } from "next-intl/server";
+import { Analytics } from "@vercel/analytics/next";
 
 import { Providers } from "@/app/providers";
 
@@ -37,6 +38,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
         <Providers locale={locale} messages={messages} timeZone={timeZone}>
           {children}
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
