@@ -1,16 +1,16 @@
 /**
- * Services module page (`/services`). Placeholder until the module is implemented in Phase 3.
+ * Services module page (`/services`): categories and services CRUD.
  */
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-import { ModulePlaceholder } from "@/components/layout/module-placeholder";
+import { ServicesPage } from "@/components/services/services-page";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("modules.services");
+  const t = await getTranslations("services");
   return { title: t("title") };
 }
 
-export default function ServicesPage() {
-  return <ModulePlaceholder moduleKey="services" />;
+export default function ServicesRoute() {
+  return <ServicesPage />;
 }

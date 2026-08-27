@@ -17,6 +17,8 @@ export const ErrorCodes = {
   VALIDATION_FAILED: 3001,
   SLOT_UNAVAILABLE: 4003,
   BOOKING_INVALID_STATE: 4004,
+  /** Two shift windows on the same weekday intersect. */
+  SHIFT_OVERLAP: 4006,
 } as const;
 
 interface EnvelopeError {
