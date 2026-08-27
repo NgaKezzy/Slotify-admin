@@ -127,6 +127,8 @@ export function startOfDayInZone(date: string, timeZone: string): string {
 export function endOfDayInZone(date: string, timeZone: string): string {
   const start = new Date(startOfDayInZone(date, timeZone)).getTime();
   return new Date(start + DAY_MS - 1).toISOString();
+}
+
 /**
  * Normalises an API time ("09:00:00") to the `HH:MM` value an `<input type="time">` expects.
  * @param time Time string from the API, possibly with seconds.
