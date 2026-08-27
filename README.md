@@ -12,17 +12,31 @@ stores business data itself: Auth.js keeps the session, every screen talks to
 
 - Node.js **24 LTS** or newer
 - pnpm **10** or newer (`corepack enable` installs the pinned version automatically)
-- A running `slotify-backend` (default `http://localhost:8080`) for real data
+- A running `slotify-backend` (default `http://localhost:8081`) – see its README
 
 ## Setup
 
+If you bootstrapped the backend with `slotify-backend/scripts/setup.sh` (or
+`setup.ps1`), `.env.local` was already written for you – skip to `pnpm install`.
+
 ```bash
-cp .env.example .env.local   # then edit the values
+cp .env.example .env.local   # points at http://localhost:8081 by default
 pnpm install
 pnpm dev                     # http://localhost:3000
 ```
 
-Demo login (backend `demo` profile): `owner@demo.com / password`.
+## Default accounts
+
+Backend demo data (seeded on first start). Password `Password123!` unless the
+backend was configured otherwise:
+
+| Login                           | Role        | Where it lands                   |
+| ------------------------------- | ----------- | -------------------------------- |
+| `owner@slotify.demo`            | SALON_OWNER | Salon dashboard (Glow & Go, Serenity Spa) |
+| `admin@slotify.demo`            | SUPER_ADMIN | Platform area (`/platform`)      |
+
+When the backend was set up with `scripts/setup.*`, the super admin is
+`admin@admin.com` / `admin` and every demo account uses password `admin`.
 
 ## Scripts
 
@@ -38,7 +52,7 @@ Demo login (backend `demo` profile): `owner@demo.com / password`.
 
 ## Environment variables
 
-See [`.env.example`](.env.example) — every variable is documented there.
+One environment; see [`.env.example`](.env.example) — every variable is documented there.
 
 | Variable              | Used by                                          |
 | --------------------- | ------------------------------------------------ |
@@ -84,4 +98,6 @@ docker run -p 3000:3000 --env-file .env.local slotify-admin
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for the request flow and how to add a module.
 
-# Slotify-admin
+## Support
+
+Questions or issues: **ngakezzy@gmail.com**
