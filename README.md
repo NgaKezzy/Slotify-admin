@@ -38,6 +38,13 @@ backend was configured otherwise:
 When the backend was set up with `scripts/setup.*`, the super admin is
 `admin@admin.com` / `admin` and every demo account uses password `admin`.
 
+## Announcements (push to the apps)
+
+Sign in as the super admin → *Platform → Announcements*: write a title and a
+message, pick the audience (customers / staff / everyone) and send. Every
+recipient gets an in-app notification and, when the backend has Firebase
+credentials (see the backend README), a push on their devices.
+
 ## Scripts
 
 | Script           | Purpose                                                       |

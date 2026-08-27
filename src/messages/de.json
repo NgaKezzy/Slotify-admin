@@ -851,7 +851,8 @@
       "amenities": "Ausstattung",
       "payouts": "Auszahlungen",
       "auditLogs": "Audit-Protokoll",
-      "backToDashboard": "Zurück zum Salon-Dashboard"
+      "backToDashboard": "Zurück zum Salon-Dashboard",
+      "notifications": "Mitteilungen"
     },
     "overview": {
       "title": "Plattform-Übersicht",
@@ -1003,6 +1004,31 @@
         "STAFF_UPDATED": "Mitarbeiter aktualisiert",
         "USER_STATUS_CHANGED": "Benutzerstatus geändert",
         "USER_DELETED": "Benutzer gelöscht"
+      }
+    },
+    "notifications": {
+      "title": "Mitteilungen",
+      "description": "Push-Benachrichtigung an die Apps senden – an Kunden, Mitarbeiter oder alle.",
+      "composeTitle": "Neue Mitteilung",
+      "composeDescription": "Wird als Push zugestellt und in der Benachrichtigungsliste jedes Empfängers gespeichert. Schreibe sie in der Sprache deiner Nutzer.",
+      "audience": {
+        "label": "Senden an",
+        "ALL": "Alle (Kunden und Mitarbeiter)",
+        "CUSTOMERS": "Nur Kunden",
+        "STAFF": "Nur Mitarbeiter"
+      },
+      "titleLabel": "Titel",
+      "titlePlaceholder": "z. B. 20 % Rabatt am Wochenende",
+      "bodyLabel": "Nachricht",
+      "bodyPlaceholder": "Was möchtest du mitteilen?",
+      "send": "Mitteilung senden",
+      "sending": "Wird gesendet…",
+      "sent": "An {count, plural, =0 {keine Nutzer} =1 {1 Nutzer} other {# Nutzer}} gesendet.",
+      "errors": {
+        "titleRequired": "Bitte einen Titel eingeben",
+        "titleTooLong": "Titel ist zu lang",
+        "bodyRequired": "Bitte eine Nachricht eingeben",
+        "bodyTooLong": "Nachricht ist zu lang"
       }
     }
   }

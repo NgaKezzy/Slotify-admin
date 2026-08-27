@@ -172,3 +172,14 @@ export function useAuditLogs(params: AuditLogsParams = {}) {
       unwrap(await api.GET("/api/v1/admin/platform/audit-logs", { params: { query: params } })),
   });
 }
+
+export type BroadcastInput = components["schemas"]["BroadcastRequest"];
+export type BroadcastResult = components["schemas"]["BroadcastResponse"];
+
+/** Sends a platform announcement (in-app + push) to customers, staff or both. */
+export function useBroadcastNotification() {
+  return useMutation({
+    mutationFn: async (body: BroadcastInput) =>
+      unwrap(await api.POST("/api/v1/admin/platform/notifications/broadcast", { body })),
+  });
+}

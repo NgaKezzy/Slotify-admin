@@ -851,7 +851,8 @@
       "amenities": "Amenities",
       "payouts": "Payouts",
       "auditLogs": "Audit logs",
-      "backToDashboard": "Back to salon dashboard"
+      "backToDashboard": "Back to salon dashboard",
+      "notifications": "Announcements"
     },
     "overview": {
       "title": "Platform overview",
@@ -1003,6 +1004,31 @@
         "STAFF_UPDATED": "Staff updated",
         "USER_STATUS_CHANGED": "User status changed",
         "USER_DELETED": "User deleted"
+      }
+    },
+    "notifications": {
+      "title": "Announcements",
+      "description": "Send a push notification to the mobile apps – customers, staff or everyone.",
+      "composeTitle": "New announcement",
+      "composeDescription": "Delivered as a push notification and stored in the in-app notification list of every recipient. Write it in your users' language.",
+      "audience": {
+        "label": "Send to",
+        "ALL": "Everyone (customers and staff)",
+        "CUSTOMERS": "Customers only",
+        "STAFF": "Staff only"
+      },
+      "titleLabel": "Title",
+      "titlePlaceholder": "e.g. 20% off this weekend",
+      "bodyLabel": "Message",
+      "bodyPlaceholder": "What do you want to tell them?",
+      "send": "Send announcement",
+      "sending": "Sending…",
+      "sent": "Sent to {count, plural, =0 {no users} =1 {1 user} other {# users}}.",
+      "errors": {
+        "titleRequired": "Please enter a title",
+        "titleTooLong": "Title is too long",
+        "bodyRequired": "Please enter a message",
+        "bodyTooLong": "Message is too long"
       }
     }
   }

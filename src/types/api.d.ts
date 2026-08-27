@@ -530,6 +530,26 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/me/push-test": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Send a test push notification to my devices
+         * @description Verifies the Firebase setup end to end: reports whether the server has credentials, how many devices are registered for the caller and how many accepted the push.
+         */
+        post: operations["pushTest"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/me/favorites/{salonId}": {
         parameters: {
             query?: never;
@@ -1173,6 +1193,26 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/admin/platform/notifications/broadcast": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Send an announcement to customers, staff or both
+         * @description Stores an in-app notification for every user of the audience and pushes it to their registered devices (when Firebase is configured).
+         */
+        post: operations["broadcast"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/admin/platform/categories": {
         parameters: {
             query?: never;
@@ -1216,6 +1256,23 @@ export interface paths {
         };
         /** Get instance information */
         get: operations["info"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/staff/stats": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** My earnings and booking statistics for a preset range */
+        get: operations["stats"];
         put?: never;
         post?: never;
         delete?: never;
@@ -1275,6 +1332,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/staff/bookings/{bookingId}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** One of my bookings */
+        get: operations["get_3"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/salons": {
         parameters: {
             query?: never;
@@ -1317,7 +1391,7 @@ export interface paths {
             cookie?: never;
         };
         /** Get an active salon by id or slug */
-        get: operations["get_3"];
+        get: operations["get_4"];
         put?: never;
         post?: never;
         delete?: never;
@@ -1527,7 +1601,7 @@ export interface paths {
             cookie?: never;
         };
         /** Get one of my bookings */
-        get: operations["get_4"];
+        get: operations["get_5"];
         put?: never;
         post?: never;
         delete?: never;
@@ -1697,7 +1771,7 @@ export interface paths {
             cookie?: never;
         };
         /** Customer detail: statistics, notes, tags and recent bookings */
-        get: operations["get_5"];
+        get: operations["get_6"];
         put?: never;
         post?: never;
         delete?: never;
@@ -1714,7 +1788,7 @@ export interface paths {
             cookie?: never;
         };
         /** Get a booking */
-        get: operations["get_6"];
+        get: operations["get_7"];
         put?: never;
         post?: never;
         delete?: never;
@@ -1782,7 +1856,7 @@ export interface paths {
             cookie?: never;
         };
         /** Get a user */
-        get: operations["get_7"];
+        get: operations["get_8"];
         put?: never;
         post?: never;
         delete?: never;
@@ -1950,9 +2024,9 @@ export interface components {
     schemas: {
         UpdateProfileRequest: {
             fullName: string;
-            phone?: string;
-            avatarUrl?: string;
-            locale?: string;
+            phone: string;
+            avatarUrl: string;
+            locale: string;
         };
         ApiError: {
             field: string;
@@ -2610,6 +2684,21 @@ export interface components {
             /** Format: date-time */
             createdAt: string;
         };
+        ApiResponsePushTestResponse: {
+            success: boolean;
+            /** Format: int32 */
+            code: number;
+            message: string;
+            data: components["schemas"]["PushTestResponse"];
+            errors: components["schemas"]["ApiError"][];
+        };
+        PushTestResponse: {
+            enabled: boolean;
+            /** Format: int32 */
+            devices: number;
+            /** Format: int32 */
+            delivered: number;
+        };
         DeviceTokenRequest: {
             token: string;
             /** @enum {string} */
@@ -2700,6 +2789,10 @@ export interface components {
         RefreshTokenRequest: {
             refreshToken: string;
         };
+        LogoutRequest: {
+            refreshToken: string;
+            deviceToken?: string;
+        };
         LoginRequest: {
             /** Format: email */
             email: string;
@@ -2788,6 +2881,24 @@ export interface components {
             paymentMethod?: "STRIPE" | "PAYPAL" | "CASH";
             note?: string;
         };
+        BroadcastRequest: {
+            title: string;
+            body: string;
+            /** @enum {string} */
+            audience: "CUSTOMERS" | "STAFF" | "ALL";
+        };
+        ApiResponseBroadcastResponse: {
+            success: boolean;
+            /** Format: int32 */
+            code: number;
+            message: string;
+            data: components["schemas"]["BroadcastResponse"];
+            errors: components["schemas"]["ApiError"][];
+        };
+        BroadcastResponse: {
+            /** Format: int32 */
+            recipients: number;
+        };
         ApiResponseSystemInfo: {
             success: boolean;
             /** Format: int32 */
@@ -2809,6 +2920,55 @@ export interface components {
             message: string;
             data: components["schemas"]["TimeOffResponse"][];
             errors: components["schemas"]["ApiError"][];
+        };
+        ApiResponseStaffStatsResponse: {
+            success: boolean;
+            /** Format: int32 */
+            code: number;
+            message: string;
+            data: components["schemas"]["StaffStatsResponse"];
+            errors: components["schemas"]["ApiError"][];
+        };
+        PeriodDto: {
+            /** Format: date */
+            from: string;
+            /** Format: date */
+            to: string;
+            timezone: string;
+        };
+        StaffStatsDayPoint: {
+            /** Format: date */
+            date: string;
+            /** Format: int64 */
+            bookings: number;
+            /** Format: int64 */
+            completed: number;
+            /** Format: int64 */
+            revenueMinor: number;
+        };
+        StaffStatsResponse: {
+            /** @enum {string} */
+            range: "TODAY" | "WEEK" | "MONTH";
+            period: components["schemas"]["PeriodDto"];
+            currency: string;
+            /** Format: int64 */
+            bookings: number;
+            /** Format: int64 */
+            completed: number;
+            /** Format: int64 */
+            noShows: number;
+            /** Format: int64 */
+            cancelled: number;
+            /** Format: int64 */
+            upcoming: number;
+            /** Format: int64 */
+            revenueMinor: number;
+            /** Format: int64 */
+            serviceMinutes: number;
+            ratingAvg: number;
+            /** Format: int32 */
+            ratingCount: number;
+            series: components["schemas"]["StaffStatsDayPoint"][];
         };
         ApiResponseStaffScheduleResponse: {
             success: boolean;
@@ -2999,7 +3159,7 @@ export interface components {
             /** Format: int64 */
             id: number;
             /** @enum {string} */
-            type: "BOOKING_CREATED" | "BOOKING_CONFIRMED" | "BOOKING_REJECTED" | "BOOKING_CANCELLED" | "BOOKING_RESCHEDULED" | "BOOKING_REMINDER" | "BOOKING_COMPLETED" | "BOOKING_NO_SHOW" | "PAYMENT_RECEIVED" | "PAYMENT_REFUNDED" | "REVIEW_RECEIVED" | "STAFF_INVITED";
+            type: "BOOKING_CREATED" | "BOOKING_CONFIRMED" | "BOOKING_REJECTED" | "BOOKING_CANCELLED" | "BOOKING_RESCHEDULED" | "BOOKING_REMINDER" | "BOOKING_COMPLETED" | "BOOKING_NO_SHOW" | "PAYMENT_RECEIVED" | "PAYMENT_REFUNDED" | "REVIEW_RECEIVED" | "STAFF_INVITED" | "ANNOUNCEMENT";
             title: string;
             body: string;
             data: {
@@ -3096,13 +3256,6 @@ export interface components {
             message: string;
             data: components["schemas"]["StaffPerformanceResponse"];
             errors: components["schemas"]["ApiError"][];
-        };
-        PeriodDto: {
-            /** Format: date */
-            from: string;
-            /** Format: date */
-            to: string;
-            timezone: string;
         };
         StaffPerformanceResponse: {
             period: components["schemas"]["PeriodDto"];
@@ -4510,6 +4663,26 @@ export interface operations {
             };
         };
     };
+    pushTest: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["ApiResponsePushTestResponse"];
+                };
+            };
+        };
+    };
     add: {
         parameters: {
             query?: never;
@@ -4877,7 +5050,7 @@ export interface operations {
         };
         requestBody: {
             content: {
-                "application/json": components["schemas"]["RefreshTokenRequest"];
+                "application/json": components["schemas"]["LogoutRequest"];
             };
         };
         responses: {
@@ -5748,6 +5921,30 @@ export interface operations {
             };
         };
     };
+    broadcast: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["BroadcastRequest"];
+            };
+        };
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["ApiResponseBroadcastResponse"];
+                };
+            };
+        };
+    };
     createCategory_1: {
         parameters: {
             query?: never;
@@ -5816,6 +6013,28 @@ export interface operations {
             };
         };
     };
+    stats: {
+        parameters: {
+            query?: {
+                range?: "TODAY" | "WEEK" | "MONTH";
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["ApiResponseStaffStatsResponse"];
+                };
+            };
+        };
+    };
     shifts: {
         parameters: {
             query?: never;
@@ -5878,6 +6097,28 @@ export interface operations {
             };
         };
     };
+    get_3: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                bookingId: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["ApiResponseBookingResponse"];
+                };
+            };
+        };
+    };
     search: {
         parameters: {
             query?: {
@@ -5930,7 +6171,7 @@ export interface operations {
             };
         };
     };
-    get_3: {
+    get_4: {
         parameters: {
             query?: never;
             header?: never;
@@ -6192,7 +6433,7 @@ export interface operations {
             };
         };
     };
-    get_4: {
+    get_5: {
         parameters: {
             query?: never;
             header?: never;
@@ -6440,7 +6681,7 @@ export interface operations {
             };
         };
     };
-    get_5: {
+    get_6: {
         parameters: {
             query?: never;
             header?: never;
@@ -6463,7 +6704,7 @@ export interface operations {
             };
         };
     };
-    get_6: {
+    get_7: {
         parameters: {
             query?: never;
             header?: never;
@@ -6563,7 +6804,7 @@ export interface operations {
             };
         };
     };
-    get_7: {
+    get_8: {
         parameters: {
             query?: never;
             header?: never;

@@ -8,6 +8,7 @@ import {
   Landmark,
   LayoutDashboard,
   type LucideIcon,
+  Megaphone,
   Sparkles,
   Store,
   Tags,
@@ -27,6 +28,7 @@ export const PLATFORM_NAV_ITEMS: PlatformNavItem[] = [
   { key: "users", href: "/platform/users", icon: Users },
   { key: "categories", href: "/platform/categories", icon: Tags },
   { key: "amenities", href: "/platform/amenities", icon: Sparkles },
+  { key: "notifications", href: "/platform/notifications", icon: Megaphone },
   { key: "payouts", href: "/platform/payouts", icon: Landmark },
   { key: "auditLogs", href: "/platform/audit-logs", icon: ClipboardList },
 ];
