@@ -26,7 +26,7 @@ import { StaffTimeOff } from "@/components/staff/staff-time-off";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useDeleteStaff, useStaffList, useUpdateStaff, type Staff } from "@/hooks/use-staff";
+import { useDeleteStaff, useStaff, useUpdateStaff, type Staff } from "@/hooks/use-staff";
 import { toastApiError } from "@/lib/form-errors";
 
 export function StaffDetail({ staffId }: { staffId: number }) {

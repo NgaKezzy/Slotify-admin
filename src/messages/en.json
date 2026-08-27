@@ -649,5 +649,360 @@
     "deleteTitle": "Delete coupon?",
     "deleteDescription": "Customers can no longer redeem {code}.",
     "deleted": "Coupon deleted."
+  },
+  "customers": {
+    "searchPlaceholder": "Search by name, email or phone",
+    "empty": "No customers yet",
+    "columns": {
+      "customer": "Customer",
+      "bookings": "Bookings",
+      "completed": "Completed",
+      "noShows": "No-shows",
+      "totalSpent": "Total spent",
+      "lastVisit": "Last visit",
+      "tags": "Tags"
+    },
+    "detail": {
+      "title": "Customer",
+      "backToList": "All customers",
+      "notFound": "Customer not found",
+      "contact": "Contact",
+      "email": "Email",
+      "phone": "Phone",
+      "firstVisit": "First visit",
+      "lastVisit": "Last visit",
+      "never": "Never",
+      "stats": "Statistics",
+      "cancelled": "Cancelled",
+      "recentBookings": "Recent bookings",
+      "noBookings": "No bookings yet",
+      "service": "Service",
+      "staff": "Staff",
+      "date": "Date",
+      "total": "Total"
+    },
+    "tags": {
+      "title": "Tags",
+      "manage": "Manage tags",
+      "noTags": "No tags assigned",
+      "noneDefined": "No tags defined yet. Create one to start categorising customers.",
+      "assign": "Assign tags",
+      "assigned": "Tags updated",
+      "dialogTitle": "Manage tags",
+      "dialogDescription": "Tags are shared by all customers of this salon.",
+      "name": "Name",
+      "color": "Colour",
+      "add": "Add tag",
+      "created": "Tag created",
+      "updated": "Tag updated",
+      "deleted": "Tag deleted",
+      "deleteTitle": "Delete tag?",
+      "deleteDescription": "\"{name}\" will be removed from every customer.",
+      "nameRequired": "Enter a tag name."
+    },
+    "notes": {
+      "title": "Notes",
+      "empty": "No notes yet",
+      "placeholder": "Add a private note about this customer...",
+      "add": "Add note",
+      "added": "Note added",
+      "deleted": "Note deleted",
+      "deleteTitle": "Delete note?",
+      "deleteDescription": "This note will be permanently removed.",
+      "by": "by {author}"
+    }
+  },
+  "reviews": {
+    "empty": "No reviews yet",
+    "summary": {
+      "average": "Average rating",
+      "count": "{count, plural, =1 {1 review} other {# reviews}}",
+      "distribution": "Rating distribution",
+      "stars": "{count, plural, =1 {1 star} other {# stars}}"
+    },
+    "filter": {
+      "all": "All",
+      "visible": "Visible",
+      "hidden": "Hidden"
+    },
+    "visible": "Visible",
+    "hidden": "Hidden",
+    "staff": "Staff: {name}",
+    "booking": "Booking {code}",
+    "ownerReply": "Your reply",
+    "reply": "Reply",
+    "editReply": "Edit reply",
+    "hide": "Hide",
+    "show": "Show",
+    "replyDialog": {
+      "title": "Reply to review",
+      "description": "Your reply is public and shown under the review.",
+      "placeholder": "Thank you for your feedback...",
+      "submit": "Send reply",
+      "required": "Enter a reply."
+    },
+    "replied": "Reply sent",
+    "hiddenToast": "Review hidden",
+    "shownToast": "Review is visible again",
+    "rating": "{rating} out of 5"
+  },
+  "payments": {
+    "empty": "No payments yet",
+    "columns": {
+      "booking": "Booking",
+      "provider": "Provider",
+      "type": "Type",
+      "amount": "Amount",
+      "refunded": "Refunded",
+      "status": "Status",
+      "paidAt": "Paid at"
+    },
+    "provider": {
+      "STRIPE": "Stripe",
+      "PAYPAL": "PayPal",
+      "CASH": "Cash"
+    },
+    "type": {
+      "FULL": "Full payment",
+      "DEPOSIT": "Deposit"
+    },
+    "status": {
+      "PENDING": "Pending",
+      "SUCCEEDED": "Succeeded",
+      "FAILED": "Failed",
+      "REFUNDED": "Refunded",
+      "PARTIAL_REFUND": "Partially refunded"
+    },
+    "refund": "Refund",
+    "cashNotRefundable": "Cash payments are settled in the salon and cannot be refunded here.",
+    "notRefundable": "Nothing left to refund on this payment.",
+    "refundDialog": {
+      "title": "Refund payment",
+      "description": "Booking {code} · refundable {amount}",
+      "amount": "Amount",
+      "reason": "Reason",
+      "reasonPlaceholder": "Customer cancelled, service not delivered, ...",
+      "submit": "Refund",
+      "amountInvalid": "Enter an amount between 0.01 and {max}.",
+      "reasonRequired": "Enter a reason."
+    },
+    "refunded": "Refund issued"
+  },
+  "reports": {
+    "period": {
+      "label": "Period",
+      "presets": {
+        "last7": "Last 7 days",
+        "last30": "Last 30 days",
+        "thisMonth": "This month",
+        "lastMonth": "Last month",
+        "custom": "Custom"
+      },
+      "granularity": "Group by",
+      "DAY": "Day",
+      "WEEK": "Week",
+      "MONTH": "Month"
+    },
+    "revenue": {
+      "title": "Revenue",
+      "total": "Total revenue",
+      "bookings": "Completed bookings",
+      "byMethod": "By payment method",
+      "topServices": "Top services",
+      "service": "Service",
+      "revenue": "Revenue",
+      "empty": "No revenue in this period"
+    },
+    "bookingsChart": {
+      "title": "Bookings by status",
+      "total": "Total bookings",
+      "empty": "No bookings in this period"
+    },
+    "staff": {
+      "title": "Staff performance",
+      "name": "Staff",
+      "bookings": "Bookings",
+      "completed": "Completed",
+      "noShows": "No-shows",
+      "revenue": "Revenue",
+      "rating": "Rating",
+      "utilisation": "Utilisation",
+      "inactive": "Inactive",
+      "empty": "No staff data"
+    },
+    "export": {
+      "title": "Export",
+      "excel": "Excel",
+      "pdf": "PDF",
+      "revenue": "Revenue",
+      "bookings": "Bookings",
+      "staff": "Staff",
+      "started": "Download started",
+      "failed": "Export failed"
+    }
+  },
+  "platform": {
+    "nav": {
+      "overview": "Overview",
+      "salons": "Salons",
+      "users": "Users",
+      "categories": "Categories",
+      "amenities": "Amenities",
+      "payouts": "Payouts",
+      "auditLogs": "Audit logs",
+      "backToDashboard": "Back to salon dashboard"
+    },
+    "overview": {
+      "title": "Platform overview",
+      "description": "Health of the whole marketplace over the last 30 days.",
+      "salons": "Salons",
+      "users": "Users",
+      "bookings30": "Bookings (30 days)",
+      "revenue30": "Revenue (30 days)",
+      "topSalons": "Top salons by revenue",
+      "salon": "Salon",
+      "completedBookings": "Completed bookings",
+      "revenue": "Revenue",
+      "noRevenue": "No revenue yet",
+      "salonStatus": {
+        "PENDING": "Pending",
+        "ACTIVE": "Active",
+        "SUSPENDED": "Suspended"
+      }
+    },
+    "salons": {
+      "title": "Salons",
+      "description": "Approve new salons, suspend misbehaving ones and set the platform commission.",
+      "empty": "No salons",
+      "columns": {
+        "salon": "Salon",
+        "location": "Location",
+        "rating": "Rating",
+        "status": "Status"
+      },
+      "approve": "Approve",
+      "suspend": "Suspend",
+      "commission": "Commission",
+      "approved": "Salon approved",
+      "suspended": "Salon suspended",
+      "suspendTitle": "Suspend salon?",
+      "suspendDescription": "\"{name}\" will disappear from the customer app and stop taking bookings.",
+      "commissionDialog": {
+        "title": "Platform commission",
+        "description": "Percentage of online revenue kept by the platform for {name}.",
+        "percent": "Commission (%)",
+        "invalid": "Enter a percentage between 0 and 100.",
+        "saved": "Commission saved"
+      }
+    },
+    "users": {
+      "title": "Users",
+      "description": "Every account on the platform: owners, staff and customers.",
+      "searchPlaceholder": "Search by name or email",
+      "empty": "No users",
+      "columns": {
+        "user": "User",
+        "role": "Role",
+        "status": "Status",
+        "provider": "Sign-in",
+        "createdAt": "Joined"
+      },
+      "role": {
+        "SUPER_ADMIN": "Super admin",
+        "SALON_OWNER": "Salon owner",
+        "STAFF": "Staff",
+        "CUSTOMER": "Customer"
+      },
+      "status": {
+        "ACTIVE": "Active",
+        "SUSPENDED": "Suspended",
+        "DELETED": "Deleted"
+      },
+      "provider": {
+        "LOCAL": "Email",
+        "GOOGLE": "Google"
+      },
+      "suspend": "Suspend",
+      "activate": "Activate",
+      "changeRole": "Change role",
+      "suspended": "User suspended",
+      "activated": "User activated",
+      "suspendTitle": "Suspend user?",
+      "suspendDescription": "{name} will be signed out and unable to sign in until reactivated.",
+      "roleDialog": {
+        "title": "Change role",
+        "description": "Select the new role for {name}.",
+        "role": "Role",
+        "saved": "Role updated"
+      }
+    },
+    "catalog": {
+      "categories": {
+        "title": "Categories",
+        "description": "Salon categories shown as filters in the customer app.",
+        "add": "Add category",
+        "name": "Name",
+        "iconUrl": "Icon URL",
+        "sortOrder": "Sort order",
+        "empty": "No categories yet"
+      },
+      "amenities": {
+        "title": "Amenities",
+        "description": "Amenities salons can advertise (Wi-Fi, parking, ...).",
+        "add": "Add amenity",
+        "name": "Name",
+        "icon": "Icon name",
+        "empty": "No amenities yet"
+      },
+      "editTitle": "Edit",
+      "createTitle": "Create",
+      "nameRequired": "Enter a name.",
+      "created": "Created",
+      "updated": "Updated",
+      "deleted": "Deleted",
+      "deleteTitle": "Delete \"{name}\"?",
+      "deleteDescription": "Salons using it will lose the reference."
+    },
+    "payouts": {
+      "title": "Payouts",
+      "description": "Online revenue collected per salon, the platform commission and the amount to pay out.",
+      "empty": "No salons in this period",
+      "columns": {
+        "salon": "Salon",
+        "commission": "Commission %",
+        "onlineRevenue": "Online revenue",
+        "commissionAmount": "Commission",
+        "payout": "Payout",
+        "cash": "Cash (in salon)"
+      },
+      "export": "Export Excel"
+    },
+    "auditLogs": {
+      "title": "Audit logs",
+      "description": "Who changed what, across every salon.",
+      "empty": "No audit entries",
+      "entityPlaceholder": "Entity (e.g. booking)",
+      "allActions": "All actions",
+      "columns": {
+        "when": "When",
+        "action": "Action",
+        "entity": "Entity",
+        "actor": "Actor",
+        "salon": "Salon",
+        "diff": "Changes"
+      },
+      "action": {
+        "BOOKING_CREATED": "Booking created",
+        "BOOKING_STATUS_CHANGED": "Booking status changed",
+        "BOOKING_RESCHEDULED": "Booking rescheduled",
+        "PAYMENT_REFUNDED": "Payment refunded",
+        "SALON_UPDATED": "Salon updated",
+        "SALON_SETTINGS_UPDATED": "Salon settings updated",
+        "SALON_STATUS_CHANGED": "Salon status changed",
+        "STAFF_UPDATED": "Staff updated",
+        "USER_STATUS_CHANGED": "User status changed",
+        "USER_DELETED": "User deleted"
+      }
+    }
   }
 }

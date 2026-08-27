@@ -3,11 +3,13 @@
 /**
  * Fixed left navigation for the dashboard, built on the shadcn Sidebar.
  * Highlights the active route and collapses to icons on narrow screens.
- * Rendered by `src/app/(dashboard)/layout.tsx`.
+ * The "Administration" group is only shown to SUPER_ADMIN users.
+ * Rendered by `src/app/(dashboard)/layout.tsx` and `src/app/(platform)/layout.tsx`.
  */
 import { CalendarCheck } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useSession } from "next-auth/react";
 import { useTranslations } from "next-intl";
 
 import { NAV_GROUPS } from "@/components/layout/nav-config";
@@ -24,9 +26,15 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 
+/** Key of the nav group reserved for SUPER_ADMIN (see `nav-config.ts`). */
+const ADMIN_GROUP_KEY = "admin";
+
 export function AppSidebar() {
   const t = useTranslations();
   const pathname = usePathname();
+  const { data: session } = useSession();
+  const isSuperAdmin = session?.user.role === "SUPER_ADMIN";
+  const groups = NAV_GROUPS.filter((group) => group.key !== ADMIN_GROUP_KEY || isSuperAdmin);
 
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
@@ -48,7 +56,7 @@ export function AppSidebar() {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        {NAV_GROUPS.map((group) => (
+        {groups.map((group) => (
           <SidebarGroup key={group.key}>
             <SidebarGroupLabel>{t(`nav.groups.${group.key}`)}</SidebarGroupLabel>
             <SidebarGroupContent>
