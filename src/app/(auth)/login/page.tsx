@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 import { LoginForm } from "@/app/(auth)/login/login-form";
+import { BrandLogo } from "@/components/layout/brand-logo";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -39,6 +40,9 @@ export default async function LoginPage() {
       </div>
       <Card className="relative w-full max-w-sm border-border/60 bg-card/90 shadow-xl shadow-primary/10 backdrop-blur">
         <CardHeader className="text-center">
+          <div className="mx-auto mb-2 flex size-12 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-md shadow-primary/30">
+            <BrandLogo className="size-7" />
+          </div>
           <p className="text-sm font-semibold text-primary">{t("app.name")}</p>
           <CardTitle className="text-xl">{t("auth.login.title")}</CardTitle>
           <CardDescription>{t("auth.login.description")}</CardDescription>

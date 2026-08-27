@@ -6,13 +6,13 @@
  * The "Administration" group is only shown to SUPER_ADMIN users.
  * Rendered by `src/app/(dashboard)/layout.tsx` and `src/app/(platform)/layout.tsx`.
  */
-import { CalendarCheck } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { useTranslations } from "next-intl";
 
 import { NAV_GROUPS } from "@/components/layout/nav-config";
+import { BrandLogo } from "@/components/layout/brand-logo";
 import {
   Sidebar,
   SidebarContent,
@@ -45,7 +45,7 @@ export function AppSidebar() {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" render={<Link href="/" />}>
               <div className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                <CalendarCheck className="size-4" />
+                <BrandLogo className="size-5" />
               </div>
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-semibold">{t("app.name")}</span>
