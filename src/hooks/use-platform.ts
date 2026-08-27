@@ -4,8 +4,6 @@
  * audit logs. Categories and amenities live in `use-platform-catalog.ts`.
  *
  * The OpenAPI generator names nested DTOs by their Java simple name, so the
- * payouts `Row` collides with the staff-performance `Row`; `PayoutRow` below is
- * the real shape returned by the API and the hook casts to it.
  */
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
@@ -22,20 +20,10 @@ export type AuditLog = components["schemas"]["AuditLogResponse"];
 export type AuditAction = AuditLog["action"];
 
 /** One salon line of the payouts report (online revenue minus commission = payout). */
-export interface PayoutRow {
-  salonId: number;
-  salonName: string;
-  currency: string;
-  commissionPercent: number;
-  onlineRevenueMinor: number;
-  commissionMinor: number;
-  payoutMinor: number;
-  cashRevenueMinor: number;
-}
+export type PayoutRow = components["schemas"]["PayoutsReportResponseRow"];
 
-/** Payouts report with the real `rows` shape (see file comment). */
-export type PayoutsReport = Omit<components["schemas"]["PayoutsReportResponse"], "rows"> & {
-  rows: PayoutRow[];
+/** Payouts report: one row per active salon for the period. */
+export type PayoutsReport = components["schemas"]["PayoutsReportResponse"];
 };
 
 export interface PlatformUsersParams {
@@ -175,7 +163,7 @@ export function usePayoutsReport(params: PayoutsParams = {}) {
     queryFn: async () =>
       unwrap(
         await api.GET("/api/v1/admin/platform/reports/payouts", { params: { query: params } })
-      ) as unknown as PayoutsReport,
+      ),
   });
 }
 

@@ -1,10 +1,6 @@
 /**
  * TanStack Query hooks for the reports module (revenue, bookings by status,
  * staff performance). Exports go through `downloadReport` in `src/lib/download.ts`.
- *
- * The OpenAPI generator names nested DTOs by their Java simple name, so the
- * bookings-report `Point` collides with the revenue `Point`. `BookingsPoint`
- * below is the real shape the API returns and the hook casts to it.
  */
 import { useQuery } from "@tanstack/react-query";
 
@@ -18,20 +14,14 @@ export type RevenueGranularity = ReportGranularity;
 export type DashboardReport = components["schemas"]["DashboardResponse"];
 export type DashboardKpis = components["schemas"]["Kpis"];
 export type TodayBooking = components["schemas"]["TodayBooking"];
-export type StaffPerformanceRow = components["schemas"]["Row"];
+export type StaffPerformanceRow = components["schemas"]["StaffPerformanceResponseRow"];
 export type BookingStatusKey = components["schemas"]["BookingResponse"]["status"];
 
 /** One bucket of the bookings report: total plus a count per booking status. */
-export interface BookingsPoint {
-  periodStart: string;
-  total: number;
-  counts: Record<BookingStatusKey, number>;
-}
+export type BookingsPoint = components["schemas"]["BookingsReportResponsePoint"];
 
-/** Bookings report with the real `series` shape (see file comment). */
-export type BookingsReport = Omit<components["schemas"]["BookingsReportResponse"], "series"> & {
-  series: BookingsPoint[];
-};
+/** Bookings report: totals plus a series of per-status counts. */
+export type BookingsReport = components["schemas"]["BookingsReportResponse"];
 
 /** Common date-range parameters (`YYYY-MM-DD`, salon timezone). */
 export interface ReportPeriod {
@@ -100,7 +90,7 @@ export function useBookingsReport(
         await api.GET("/api/v1/admin/salons/{salonId}/reports/bookings", {
           params: { path: { salonId }, query: { ...period, granularity } },
         })
-      ) as unknown as BookingsReport,
+      ),
   });
 }
 
