@@ -3,7 +3,7 @@
  * The admin panel does not use URL locale prefixes; the active locale is stored
  * in a cookie (see `src/i18n/request.ts`).
  */
-export const LOCALES = ["en", "de"] as const;
+export const LOCALES = ["en", "de", "vi"] as const;
 
 export type Locale = (typeof LOCALES)[number];
 

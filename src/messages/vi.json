@@ -1,0 +1,1009 @@
+{
+  "app": {
+    "name": "Slotify",
+    "tagline": "Quản trị đặt lịch spa & salon"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "comingSoon": "Phân hệ này sẽ được phát triển ở giai đoạn sau.",
+    "language": "Ngôn ngữ",
+    "locale": {
+      "en": "Tiếng Anh",
+      "de": "Tiếng Đức",
+      "vi": "Tiếng Việt"
+    },
+    "noResults": "Không có kết quả",
+    "pageOf": "Trang {page} / {total}",
+    "totalItems": "{count} mục",
+    "previous": "Trước",
+    "next": "Sau",
+    "cancel": "Huỷ",
+    "confirm": "Xác nhận",
+    "save": "Lưu",
+    "delete": "Xoá",
+    "edit": "Sửa",
+    "create": "Tạo mới",
+    "search": "Tìm kiếm",
+    "actions": "Thao tác",
+    "saved": "Đã lưu",
+    "error": "Đã xảy ra lỗi",
+    "refresh": "Làm mới",
+    "all": "Tất cả",
+    "from": "Từ",
+    "to": "Đến",
+    "yes": "Có",
+    "no": "Không",
+    "close": "Đóng",
+    "back": "Quay lại",
+    "optional": "Không bắt buộc",
+    "active": "Đang hoạt động",
+    "inactive": "Ngưng hoạt động",
+    "add": "Thêm",
+    "remove": "Gỡ bỏ",
+    "none": "Không có",
+    "saving": "Đang lưu...",
+    "moveUp": "Chuyển lên",
+    "moveDown": "Chuyển xuống",
+    "notFound": "Không tìm thấy",
+    "upload": {
+      "choose": "Chọn ảnh",
+      "uploading": "Đang tải lên...",
+      "remove": "Gỡ ảnh",
+      "failed": "Tải lên thất bại: {message}"
+    },
+    "days": {
+      "MONDAY": "Thứ Hai",
+      "TUESDAY": "Thứ Ba",
+      "WEDNESDAY": "Thứ Tư",
+      "THURSDAY": "Thứ Năm",
+      "FRIDAY": "Thứ Sáu",
+      "SATURDAY": "Thứ Bảy",
+      "SUNDAY": "Chủ Nhật"
+    },
+    "minutes": "{count} phút",
+    "daysCount": "{count} ngày"
+  },
+  "theme": {
+    "toggle": "Đổi giao diện",
+    "light": "Sáng",
+    "dark": "Tối",
+    "system": "Theo hệ thống"
+  },
+  "auth": {
+    "login": {
+      "title": "Đăng nhập",
+      "description": "Nhập thông tin đăng nhập để truy cập trang quản trị.",
+      "email": "Email",
+      "emailPlaceholder": "owner@demo.com",
+      "password": "Mật khẩu",
+      "submit": "Đăng nhập",
+      "submitting": "Đang đăng nhập...",
+      "errors": {
+        "invalidCredentials": "Email hoặc mật khẩu không đúng.",
+        "unavailable": "Máy chủ hiện không khả dụng. Vui lòng thử lại sau.",
+        "invalidEmail": "Nhập địa chỉ email hợp lệ.",
+        "passwordRequired": "Vui lòng nhập mật khẩu."
+      }
+    },
+    "logout": "Đăng xuất"
+  },
+  "nav": {
+    "dashboard": "Tổng quan",
+    "bookings": "Lịch hẹn",
+    "calendar": "Lịch",
+    "staff": "Nhân viên",
+    "services": "Dịch vụ",
+    "customers": "Khách hàng",
+    "promotions": "Khuyến mãi",
+    "reviews": "Đánh giá",
+    "payments": "Thanh toán",
+    "reports": "Báo cáo",
+    "settings": "Cài đặt",
+    "platform": "Nền tảng",
+    "groups": {
+      "salon": "Salon",
+      "management": "Quản lý",
+      "admin": "Quản trị"
+    },
+    "toggleSidebar": "Ẩn/hiện thanh bên"
+  },
+  "salonSwitcher": {
+    "label": "Salon hiện tại",
+    "placeholder": "Chọn salon",
+    "none": "Chưa có salon",
+    "create": "Tạo salon",
+    "noneTitle": "Bạn chưa có salon nào",
+    "noneDescription": "Tạo salon đầu tiên để bắt đầu quản lý lịch hẹn, nhân viên và dịch vụ."
+  },
+  "userMenu": {
+    "open": "Mở menu người dùng",
+    "profile": "Hồ sơ",
+    "guest": "Khách"
+  },
+  "dashboard": {
+    "title": "Tổng quan",
+    "description": "Tổng quan hoạt động hôm nay của salon.",
+    "kpi": {
+      "bookingsToday": "Lịch hẹn hôm nay",
+      "revenueToday": "Doanh thu hôm nay",
+      "newCustomers": "Khách hàng mới",
+      "pendingBookings": "Lịch hẹn chờ xác nhận",
+      "revenue": "Doanh thu",
+      "bookings": "Lịch hẹn",
+      "completed": "Hoàn thành",
+      "cancelled": "Đã huỷ",
+      "noShow": "Không đến",
+      "averageTicket": "Giá trị trung bình",
+      "occupancy": "Tỷ lệ lấp đầy",
+      "vsPrevious": "so với kỳ trước",
+      "noPrevious": "Không có dữ liệu kỳ trước"
+    },
+    "period": {
+      "label": "Khoảng thời gian",
+      "days7": "7 ngày qua",
+      "days30": "30 ngày qua",
+      "days90": "90 ngày qua"
+    },
+    "revenueChart": {
+      "title": "Doanh thu",
+      "description": "Doanh thu theo ngày trong khoảng thời gian đã chọn.",
+      "total": "Tổng",
+      "revenue": "Doanh thu",
+      "bookings": "Lịch hẹn",
+      "empty": "Chưa có doanh thu trong khoảng thời gian này."
+    },
+    "today": {
+      "title": "Lịch hẹn hôm nay",
+      "upcoming": "{count} sắp tới",
+      "empty": "Hôm nay không có lịch hẹn nào.",
+      "viewAll": "Xem tất cả lịch hẹn"
+    },
+    "liveFeed": {
+      "title": "Hoạt động trực tiếp",
+      "description": "Các sự kiện lịch hẹn theo thời gian thực.",
+      "empty": "Đang chờ sự kiện...",
+      "clear": "Xoá"
+    },
+    "error": "Không thể tải trang tổng quan."
+  },
+  "modules": {
+    "bookings": {
+      "title": "Lịch hẹn",
+      "description": "Danh sách, xem theo lịch và chi tiết lịch hẹn với thao tác xác nhận, từ chối và đổi lịch."
+    },
+    "calendar": {
+      "title": "Lịch",
+      "description": "Dòng thời gian theo từng nhân viên, kéo thả để đổi lịch."
+    },
+    "staff": {
+      "title": "Nhân viên",
+      "description": "Danh sách nhân viên, trình sửa ca làm hằng tuần và quản lý nghỉ phép."
+    },
+    "services": {
+      "title": "Dịch vụ",
+      "description": "Danh mục và dịch vụ với giá, thời lượng và thứ tự hiển thị."
+    },
+    "customers": {
+      "title": "Khách hàng",
+      "description": "Danh sách CRM với lịch sử, ghi chú, nhãn và giá trị trọn đời."
+    },
+    "promotions": {
+      "title": "Khuyến mãi",
+      "description": "Mã giảm giá và chiến dịch ưu đãi."
+    },
+    "reviews": {
+      "title": "Đánh giá",
+      "description": "Đánh giá của khách hàng và phản hồi của chủ salon."
+    },
+    "payments": {
+      "title": "Thanh toán",
+      "description": "Giao dịch và hoàn tiền."
+    },
+    "reports": {
+      "title": "Báo cáo",
+      "description": "Doanh thu, lịch hẹn và hiệu suất nhân viên, xuất Excel/PDF."
+    },
+    "settings": {
+      "title": "Cài đặt",
+      "description": "Hồ sơ salon, giờ mở cửa, quy tắc đặt lịch, hình ảnh và phương thức thanh toán."
+    },
+    "platform": {
+      "title": "Nền tảng",
+      "description": "Khu vực super admin: duyệt salon, người dùng, danh mục và cài đặt nền tảng."
+    },
+    "newSalon": {
+      "title": "Tạo salon",
+      "description": "Biểu mẫu tạo salon sẽ có cùng với phân hệ cài đặt."
+    }
+  },
+  "status": {
+    "booking": {
+      "PENDING": "Chờ xác nhận",
+      "CONFIRMED": "Đã xác nhận",
+      "IN_PROGRESS": "Đang thực hiện",
+      "COMPLETED": "Hoàn thành",
+      "CANCELLED": "Đã huỷ",
+      "NO_SHOW": "Không đến",
+      "REJECTED": "Bị từ chối"
+    },
+    "payment": {
+      "UNPAID": "Chưa thanh toán",
+      "PAID": "Đã thanh toán",
+      "PARTIALLY_PAID": "Thanh toán một phần",
+      "REFUNDED": "Đã hoàn tiền"
+    }
+  },
+  "realtime": {
+    "bookingEvent": "Lịch hẹn {code}: {status}"
+  },
+  "bookings": {
+    "title": "Lịch hẹn",
+    "description": "Quản lý toàn bộ lịch hẹn của salon.",
+    "newWalkIn": "Lịch hẹn tại quầy mới",
+    "filters": {
+      "search": "Tìm theo mã, khách hàng hoặc email",
+      "status": "Trạng thái",
+      "allStatuses": "Tất cả trạng thái",
+      "staff": "Nhân viên",
+      "allStaff": "Tất cả nhân viên",
+      "from": "Từ",
+      "to": "Đến",
+      "reset": "Đặt lại bộ lọc"
+    },
+    "columns": {
+      "code": "Mã",
+      "customer": "Khách hàng",
+      "services": "Dịch vụ",
+      "staff": "Nhân viên",
+      "start": "Bắt đầu",
+      "status": "Trạng thái",
+      "payment": "Thanh toán",
+      "total": "Tổng"
+    },
+    "empty": "Không có lịch hẹn nào khớp với bộ lọc hiện tại.",
+    "detail": {
+      "title": "Lịch hẹn {code}",
+      "customer": "Khách hàng",
+      "contact": "Liên hệ",
+      "services": "Dịch vụ",
+      "schedule": "Thời gian",
+      "staff": "Nhân viên",
+      "autoAssigned": "tự động phân công",
+      "payment": "Thanh toán",
+      "method": "Phương thức",
+      "subtotal": "Tạm tính",
+      "discount": "Giảm giá",
+      "total": "Tổng",
+      "coupon": "Mã giảm giá",
+      "note": "Ghi chú",
+      "cancelReason": "Lý do huỷ",
+      "cancelledBy": "Huỷ bởi",
+      "createdAt": "Ngày tạo",
+      "noNote": "Không có ghi chú"
+    },
+    "paymentMethod": {
+      "CASH": "Tiền mặt",
+      "STRIPE": "Thẻ (Stripe)",
+      "PAYPAL": "PayPal"
+    },
+    "cancelledBy": {
+      "CUSTOMER": "Khách hàng",
+      "SALON": "Salon",
+      "SYSTEM": "Hệ thống"
+    },
+    "actions": {
+      "confirm": "Xác nhận",
+      "reject": "Từ chối",
+      "cancel": "Huỷ lịch hẹn",
+      "start": "Bắt đầu",
+      "complete": "Hoàn thành",
+      "noShow": "Không đến",
+      "reschedule": "Đổi lịch",
+      "markPaid": "Đánh dấu đã thanh toán (tiền mặt)"
+    },
+    "reject": {
+      "title": "Từ chối lịch hẹn",
+      "description": "Khách hàng sẽ được thông báo. Vui lòng nêu lý do.",
+      "reason": "Lý do",
+      "submit": "Từ chối"
+    },
+    "cancel": {
+      "title": "Huỷ lịch hẹn",
+      "description": "Thao tác này không thể hoàn tác. Lịch hẹn đã thanh toán sẽ được hoàn tiền tự động.",
+      "reason": "Lý do",
+      "submit": "Huỷ lịch hẹn"
+    },
+    "reasonRequired": "Vui lòng nhập lý do.",
+    "reschedule": {
+      "title": "Đổi lịch hẹn",
+      "description": "Chọn ngày, giờ mới và có thể chọn nhân viên khác.",
+      "submit": "Đổi lịch"
+    },
+    "walkIn": {
+      "title": "Lịch hẹn tại quầy mới",
+      "description": "Tạo lịch hẹn cho khách hàng đến trực tiếp hoặc gọi điện.",
+      "existingCustomer": "Khách hàng hiện có (email)",
+      "newCustomer": "Khách hàng mới",
+      "customerName": "Tên",
+      "customerEmail": "Email",
+      "services": "Dịch vụ",
+      "staff": "Nhân viên",
+      "paymentMethod": "Phương thức thanh toán",
+      "note": "Ghi chú",
+      "submit": "Tạo lịch hẹn",
+      "created": "Đã tạo lịch hẹn {code}."
+    },
+    "slot": {
+      "date": "Ngày",
+      "staff": "Nhân viên",
+      "anyStaff": "Nhân viên bất kỳ còn trống",
+      "time": "Giờ",
+      "pickServices": "Chọn ít nhất một dịch vụ.",
+      "empty": "Không còn khung giờ trống trong ngày này.",
+      "loading": "Đang tải khung giờ..."
+    },
+    "validation": {
+      "servicesRequired": "Chọn ít nhất một dịch vụ.",
+      "staffRequired": "Chọn một nhân viên.",
+      "slotRequired": "Chọn một khung giờ.",
+      "customerRequired": "Nhập email của khách hàng hoặc tên.",
+      "invalidEmail": "Nhập địa chỉ email hợp lệ.",
+      "nameRequired": "Vui lòng nhập tên."
+    },
+    "toast": {
+      "confirm": "Đã xác nhận lịch hẹn.",
+      "reject": "Đã từ chối lịch hẹn.",
+      "cancel": "Đã huỷ lịch hẹn.",
+      "start": "Đã bắt đầu lịch hẹn.",
+      "complete": "Đã hoàn thành lịch hẹn.",
+      "noShow": "Đã đánh dấu không đến.",
+      "markPaid": "Đã đánh dấu đã thanh toán.",
+      "rescheduled": "Đã đổi lịch hẹn.",
+      "slotUnavailable": "Khung giờ này không còn trống."
+    }
+  },
+  "calendar": {
+    "title": "Lịch",
+    "description": "Kéo lịch hẹn để đổi lịch; nhấp để xem chi tiết.",
+    "staffFilter": "Nhân viên",
+    "allStaff": "Tất cả nhân viên",
+    "legend": "Trạng thái",
+    "views": {
+      "day": "Ngày",
+      "week": "Tuần",
+      "month": "Tháng"
+    },
+    "today": "Hôm nay",
+    "rescheduled": "Đã di chuyển lịch hẹn.",
+    "slotUnavailable": "Khung giờ này không khả dụng – lịch hẹn đã được trả về vị trí cũ.",
+    "error": "Không thể tải lịch."
+  },
+  "validation": {
+    "required": "Trường này là bắt buộc.",
+    "invalidEmail": "Nhập địa chỉ email hợp lệ.",
+    "positive": "Phải lớn hơn 0.",
+    "nonNegative": "Phải từ 0 trở lên.",
+    "percent": "Phải nằm trong khoảng 0 đến 100.",
+    "timeRange": "Giờ kết thúc phải sau giờ bắt đầu.",
+    "dateRange": "Thời điểm kết thúc phải sau thời điểm bắt đầu."
+  },
+  "staff": {
+    "title": "Nhân viên",
+    "description": "Quản lý đội ngũ, dịch vụ họ đảm nhận, ca làm hằng tuần và nghỉ phép.",
+    "new": "Thêm nhân viên",
+    "empty": "Chưa có nhân viên nào.",
+    "columns": {
+      "member": "Nhân viên",
+      "jobTitle": "Chức danh",
+      "services": "Dịch vụ",
+      "status": "Trạng thái"
+    },
+    "servicesCount": "{count} dịch vụ",
+    "form": {
+      "createTitle": "Thêm nhân viên",
+      "editTitle": "Sửa nhân viên",
+      "displayName": "Tên hiển thị",
+      "jobTitle": "Chức danh",
+      "bio": "Giới thiệu",
+      "avatar": "Ảnh đại diện",
+      "inviteEmail": "Mời qua email",
+      "inviteHint": "Không bắt buộc. Email mời kèm mật khẩu tự tạo sẽ được gửi để nhân viên sử dụng ứng dụng nhân viên.",
+      "active": "Đang hoạt động",
+      "created": "Đã tạo nhân viên.",
+      "updated": "Đã cập nhật nhân viên."
+    },
+    "actions": {
+      "deactivate": "Ngưng hoạt động",
+      "activate": "Kích hoạt",
+      "delete": "Xoá"
+    },
+    "deleteTitle": "Xoá nhân viên?",
+    "deleteDescription": "{name} sẽ bị gỡ khỏi salon. Các lịch hẹn hiện có vẫn giữ nguyên lịch sử.",
+    "deleted": "Đã xoá nhân viên.",
+    "statusUpdated": "Đã cập nhật trạng thái.",
+    "tabs": {
+      "profile": "Hồ sơ",
+      "services": "Dịch vụ",
+      "shifts": "Ca làm",
+      "timeOff": "Nghỉ phép"
+    },
+    "backToList": "Về danh sách nhân viên",
+    "profile": {
+      "email": "Email",
+      "rating": "Xếp hạng",
+      "noBio": "Chưa có giới thiệu.",
+      "noEmail": "Chưa có tài khoản đăng nhập (chưa được mời)"
+    },
+    "servicesTab": {
+      "description": "Chọn các dịch vụ nhân viên này có thể thực hiện. Khách hàng chỉ có thể đặt nhân viên này cho các dịch vụ đó.",
+      "empty": "Hãy tạo dịch vụ trước, sau đó gán tại đây.",
+      "saved": "Đã cập nhật dịch vụ."
+    },
+    "shifts": {
+      "description": "Giờ làm việc cố định hằng tuần. Thêm nhiều khung giờ trong một ngày cho ca làm chia nhỏ.",
+      "addWindow": "Thêm khung giờ",
+      "noWindows": "Nghỉ",
+      "saved": "Đã lưu ca làm.",
+      "overlap": "Hai khung giờ trong cùng một ngày bị trùng. Hãy điều chỉnh và thử lại.",
+      "invalidRange": "Mỗi khung giờ phải có giờ kết thúc sau giờ bắt đầu."
+    },
+    "overrides": {
+      "title": "Ngoại lệ",
+      "description": "Thay đổi cho một ngày cụ thể: đánh dấu là ngày nghỉ hoặc đặt giờ làm riêng.",
+      "date": "Ngày",
+      "dayOff": "Ngày nghỉ",
+      "customHours": "Giờ làm riêng",
+      "start": "Bắt đầu",
+      "end": "Kết thúc",
+      "add": "Thêm ngoại lệ",
+      "added": "Đã thêm ngoại lệ.",
+      "deleted": "Đã gỡ ngoại lệ.",
+      "sessionNote": "Các ngoại lệ thêm trong phiên này được liệt kê bên dưới; API chưa hỗ trợ liệt kê các ngoại lệ hiện có.",
+      "empty": "Chưa thêm ngoại lệ nào trong phiên này."
+    },
+    "timeOff": {
+      "title": "Nghỉ phép",
+      "description": "Kỳ nghỉ và ngày vắng mặt. Các khung giờ trong khoảng này sẽ không thể đặt.",
+      "startAt": "Từ",
+      "endAt": "Đến",
+      "reason": "Lý do",
+      "add": "Thêm nghỉ phép",
+      "added": "Đã thêm nghỉ phép.",
+      "deleted": "Đã gỡ nghỉ phép.",
+      "empty": "Chưa có nghỉ phép nào.",
+      "deleteTitle": "Gỡ nghỉ phép?",
+      "localTimeHint": "Thời gian được nhập theo múi giờ của trình duyệt.",
+      "status": {
+        "PENDING": "Chờ duyệt",
+        "APPROVED": "Đã duyệt",
+        "REJECTED": "Bị từ chối"
+      }
+    }
+  },
+  "services": {
+    "title": "Dịch vụ",
+    "description": "Danh mục và dịch vụ với giá, thời lượng và thứ tự hiển thị.",
+    "new": "Thêm dịch vụ",
+    "empty": "Chưa có dịch vụ nào.",
+    "filterCategory": "Danh mục",
+    "allCategories": "Tất cả danh mục",
+    "columns": {
+      "service": "Dịch vụ",
+      "category": "Danh mục",
+      "price": "Giá",
+      "duration": "Thời lượng",
+      "buffer": "Thời gian đệm",
+      "status": "Trạng thái"
+    },
+    "categories": {
+      "title": "Danh mục",
+      "description": "Nhóm các dịch vụ; thứ tự nhỏ hơn hiển thị trước.",
+      "add": "Thêm danh mục",
+      "name": "Tên",
+      "sortOrder": "Thứ tự",
+      "empty": "Chưa có danh mục nào.",
+      "created": "Đã tạo danh mục.",
+      "updated": "Đã cập nhật danh mục.",
+      "deleted": "Đã xoá danh mục.",
+      "deleteTitle": "Xoá danh mục?",
+      "deleteDescription": "Các dịch vụ trong danh mục này vẫn được giữ nhưng sẽ không còn thuộc danh mục nào."
+    },
+    "form": {
+      "createTitle": "Thêm dịch vụ",
+      "editTitle": "Sửa dịch vụ",
+      "name": "Tên",
+      "category": "Danh mục",
+      "noCategory": "Không có danh mục",
+      "description": "Mô tả",
+      "duration": "Thời lượng (phút)",
+      "buffer": "Thời gian đệm sau (phút)",
+      "price": "Giá",
+      "priceHint": "Theo {currency}, ví dụ 45.00",
+      "image": "Hình ảnh",
+      "active": "Đang hoạt động (cho phép đặt)",
+      "sortOrder": "Thứ tự hiển thị",
+      "created": "Đã tạo dịch vụ.",
+      "updated": "Đã cập nhật dịch vụ."
+    },
+    "deleteTitle": "Xoá dịch vụ?",
+    "deleteDescription": "{name} sẽ bị ẩn khỏi khách hàng. Các lịch hẹn trước đây vẫn được giữ.",
+    "deleted": "Đã xoá dịch vụ.",
+    "statusUpdated": "Đã cập nhật trạng thái."
+  },
+  "settings": {
+    "title": "Cài đặt",
+    "description": "Hồ sơ salon, giờ mở cửa, quy tắc đặt lịch, thanh toán và thư viện ảnh.",
+    "tabs": {
+      "profile": "Hồ sơ",
+      "hours": "Giờ mở cửa",
+      "rules": "Đặt lịch & thanh toán",
+      "gallery": "Thư viện ảnh"
+    },
+    "profile": {
+      "description": "Thông tin công khai hiển thị cho khách hàng trong ứng dụng.",
+      "name": "Tên salon",
+      "salonDescription": "Mô tả",
+      "phone": "Điện thoại",
+      "email": "Email",
+      "address": "Địa chỉ",
+      "city": "Thành phố",
+      "country": "Quốc gia",
+      "lat": "Vĩ độ",
+      "lng": "Kinh độ",
+      "timezone": "Múi giờ",
+      "currency": "Tiền tệ",
+      "cover": "Ảnh bìa",
+      "categories": "Danh mục",
+      "amenities": "Tiện ích",
+      "saved": "Đã lưu hồ sơ.",
+      "status": "Trạng thái",
+      "statusValues": {
+        "PENDING": "Chờ phê duyệt",
+        "ACTIVE": "Đang hoạt động",
+        "SUSPENDED": "Đã tạm ngưng"
+      }
+    },
+    "hours": {
+      "description": "Thời gian salon mở cửa. Ca làm của nhân viên ngoài giờ này sẽ không thể đặt.",
+      "closed": "Đóng cửa",
+      "open": "Giờ mở",
+      "close": "Giờ đóng",
+      "saved": "Đã lưu giờ mở cửa.",
+      "invalidRange": "Giờ đóng cửa phải sau giờ mở cửa ở mọi ngày mở cửa."
+    },
+    "rules": {
+      "description": "Cách khách hàng đặt lịch và thanh toán.",
+      "booking": "Quy tắc đặt lịch",
+      "slotInterval": "Khoảng cách khung giờ (phút)",
+      "minAdvance": "Đặt trước tối thiểu (phút)",
+      "maxAdvanceDays": "Đặt trước tối đa (ngày)",
+      "cancelDeadline": "Hạn huỷ (số phút trước giờ hẹn)",
+      "autoConfirm": "Tự động xác nhận lịch hẹn",
+      "autoConfirmHint": "Tắt: lịch hẹn mới sẽ ở trạng thái chờ cho đến khi bạn xác nhận.",
+      "deposit": "Đặt cọc",
+      "requireDeposit": "Yêu cầu đặt cọc",
+      "depositPercent": "Đặt cọc (%)",
+      "payments": "Phương thức thanh toán",
+      "acceptStripe": "Thẻ, Apple Pay, Google Pay (Stripe)",
+      "acceptPaypal": "PayPal",
+      "acceptCash": "Thanh toán tại salon",
+      "saved": "Đã lưu cài đặt."
+    },
+    "gallery": {
+      "description": "Ảnh hiển thị trên trang salon. Ảnh đầu tiên sẽ xuất hiện trước.",
+      "add": "Thêm ảnh",
+      "empty": "Chưa có ảnh nào.",
+      "saved": "Đã lưu thư viện ảnh.",
+      "uploading": "Đang tải lên {count} ảnh..."
+    },
+    "newSalon": {
+      "title": "Tạo salon",
+      "description": "Điền thông tin hồ sơ; đội ngũ nền tảng sẽ xét duyệt salon mới trước khi hoạt động.",
+      "submit": "Tạo salon",
+      "created": "Đã tạo salon. Salon đang chờ đội ngũ nền tảng phê duyệt.",
+      "pendingNotice": "Salon của bạn đang chờ phê duyệt. Bạn có thể thiết lập nhân viên, dịch vụ và giờ mở cửa ngay; khách hàng sẽ thấy salon sau khi được duyệt.",
+      "reloginNotice": "Tài khoản của bạn hiện là chủ salon. Vui lòng đăng nhập lại để cập nhật quyền."
+    }
+  },
+  "promotions": {
+    "title": "Khuyến mãi",
+    "description": "Mã giảm giá khách hàng sử dụng khi thanh toán.",
+    "new": "Thêm mã giảm giá",
+    "empty": "Chưa có mã giảm giá nào.",
+    "columns": {
+      "code": "Mã",
+      "type": "Loại",
+      "value": "Giá trị",
+      "usage": "Lượt dùng",
+      "validity": "Hiệu lực",
+      "status": "Trạng thái"
+    },
+    "type": {
+      "PERCENT": "Phần trăm",
+      "FIXED": "Số tiền cố định"
+    },
+    "unlimited": "không giới hạn",
+    "validity": {
+      "always": "Luôn có hiệu lực",
+      "from": "từ {date}",
+      "until": "đến {date}"
+    },
+    "form": {
+      "createTitle": "Thêm mã giảm giá",
+      "editTitle": "Sửa mã giảm giá",
+      "code": "Mã",
+      "codeHint": "Khách hàng nhập mã này khi thanh toán; chỉ gồm chữ và số.",
+      "type": "Loại",
+      "value": "Giá trị",
+      "percentHint": "Phần trăm giảm trên đơn hàng (0-100).",
+      "fixedHint": "Số tiền giảm theo {currency}, ví dụ 15.00",
+      "minOrder": "Giá trị đơn tối thiểu",
+      "maxDiscount": "Giảm tối đa",
+      "usageLimit": "Giới hạn tổng lượt dùng",
+      "perUserLimit": "Giới hạn mỗi khách hàng",
+      "startsAt": "Bắt đầu",
+      "endsAt": "Kết thúc",
+      "active": "Đang hoạt động",
+      "created": "Đã tạo mã giảm giá.",
+      "updated": "Đã cập nhật mã giảm giá."
+    },
+    "deleteTitle": "Xoá mã giảm giá?",
+    "deleteDescription": "Khách hàng sẽ không thể sử dụng {code} nữa.",
+    "deleted": "Đã xoá mã giảm giá."
+  },
+  "customers": {
+    "searchPlaceholder": "Tìm theo tên, email hoặc số điện thoại",
+    "empty": "Chưa có khách hàng nào",
+    "columns": {
+      "customer": "Khách hàng",
+      "bookings": "Lịch hẹn",
+      "completed": "Hoàn thành",
+      "noShows": "Không đến",
+      "totalSpent": "Tổng chi tiêu",
+      "lastVisit": "Lần ghé gần nhất",
+      "tags": "Nhãn"
+    },
+    "detail": {
+      "title": "Khách hàng",
+      "backToList": "Tất cả khách hàng",
+      "notFound": "Không tìm thấy khách hàng",
+      "contact": "Liên hệ",
+      "email": "Email",
+      "phone": "Điện thoại",
+      "firstVisit": "Lần ghé đầu tiên",
+      "lastVisit": "Lần ghé gần nhất",
+      "never": "Chưa có",
+      "stats": "Thống kê",
+      "cancelled": "Đã huỷ",
+      "recentBookings": "Lịch hẹn gần đây",
+      "noBookings": "Chưa có lịch hẹn nào",
+      "service": "Dịch vụ",
+      "staff": "Nhân viên",
+      "date": "Ngày",
+      "total": "Tổng"
+    },
+    "tags": {
+      "title": "Nhãn",
+      "manage": "Quản lý nhãn",
+      "noTags": "Chưa gán nhãn nào",
+      "noneDefined": "Chưa có nhãn nào. Tạo một nhãn để bắt đầu phân loại khách hàng.",
+      "assign": "Gán nhãn",
+      "assigned": "Đã cập nhật nhãn",
+      "dialogTitle": "Quản lý nhãn",
+      "dialogDescription": "Nhãn được dùng chung cho tất cả khách hàng của salon này.",
+      "name": "Tên",
+      "color": "Màu",
+      "add": "Thêm nhãn",
+      "created": "Đã tạo nhãn",
+      "updated": "Đã cập nhật nhãn",
+      "deleted": "Đã xoá nhãn",
+      "deleteTitle": "Xoá nhãn?",
+      "deleteDescription": "\"{name}\" sẽ bị gỡ khỏi tất cả khách hàng.",
+      "nameRequired": "Nhập tên nhãn."
+    },
+    "notes": {
+      "title": "Ghi chú",
+      "empty": "Chưa có ghi chú nào",
+      "placeholder": "Thêm ghi chú riêng về khách hàng này...",
+      "add": "Thêm ghi chú",
+      "added": "Đã thêm ghi chú",
+      "deleted": "Đã xoá ghi chú",
+      "deleteTitle": "Xoá ghi chú?",
+      "deleteDescription": "Ghi chú này sẽ bị xoá vĩnh viễn.",
+      "by": "bởi {author}"
+    }
+  },
+  "reviews": {
+    "empty": "Chưa có đánh giá nào",
+    "summary": {
+      "average": "Điểm trung bình",
+      "count": "{count, plural, =1 {1 đánh giá} other {# đánh giá}}",
+      "distribution": "Phân bố điểm đánh giá",
+      "stars": "{count, plural, =1 {1 sao} other {# sao}}"
+    },
+    "filter": {
+      "all": "Tất cả",
+      "visible": "Đang hiển thị",
+      "hidden": "Đã ẩn"
+    },
+    "visible": "Đang hiển thị",
+    "hidden": "Đã ẩn",
+    "staff": "Nhân viên: {name}",
+    "booking": "Lịch hẹn {code}",
+    "ownerReply": "Phản hồi của bạn",
+    "reply": "Phản hồi",
+    "editReply": "Sửa phản hồi",
+    "hide": "Ẩn",
+    "show": "Hiện",
+    "replyDialog": {
+      "title": "Phản hồi đánh giá",
+      "description": "Phản hồi của bạn là công khai và hiển thị dưới đánh giá.",
+      "placeholder": "Cảm ơn bạn đã góp ý...",
+      "submit": "Gửi phản hồi",
+      "required": "Nhập nội dung phản hồi."
+    },
+    "replied": "Đã gửi phản hồi",
+    "hiddenToast": "Đã ẩn đánh giá",
+    "shownToast": "Đánh giá đã hiển thị trở lại",
+    "rating": "{rating} trên 5"
+  },
+  "payments": {
+    "empty": "Chưa có thanh toán nào",
+    "columns": {
+      "booking": "Lịch hẹn",
+      "provider": "Cổng thanh toán",
+      "type": "Loại",
+      "amount": "Số tiền",
+      "refunded": "Đã hoàn",
+      "status": "Trạng thái",
+      "paidAt": "Thanh toán lúc"
+    },
+    "provider": {
+      "STRIPE": "Stripe",
+      "PAYPAL": "PayPal",
+      "CASH": "Tiền mặt"
+    },
+    "type": {
+      "FULL": "Thanh toán toàn bộ",
+      "DEPOSIT": "Đặt cọc"
+    },
+    "status": {
+      "PENDING": "Đang chờ",
+      "SUCCEEDED": "Thành công",
+      "FAILED": "Thất bại",
+      "REFUNDED": "Đã hoàn tiền",
+      "PARTIAL_REFUND": "Hoàn tiền một phần"
+    },
+    "refund": "Hoàn tiền",
+    "cashNotRefundable": "Thanh toán tiền mặt được xử lý tại salon và không thể hoàn tiền ở đây.",
+    "notRefundable": "Khoản thanh toán này không còn số tiền để hoàn.",
+    "refundDialog": {
+      "title": "Hoàn tiền",
+      "description": "Lịch hẹn {code} · có thể hoàn {amount}",
+      "amount": "Số tiền",
+      "reason": "Lý do",
+      "reasonPlaceholder": "Khách hàng huỷ, dịch vụ không được thực hiện, ...",
+      "submit": "Hoàn tiền",
+      "amountInvalid": "Nhập số tiền từ 0.01 đến {max}.",
+      "reasonRequired": "Nhập lý do."
+    },
+    "refunded": "Đã hoàn tiền"
+  },
+  "reports": {
+    "period": {
+      "label": "Khoảng thời gian",
+      "presets": {
+        "last7": "7 ngày qua",
+        "last30": "30 ngày qua",
+        "thisMonth": "Tháng này",
+        "lastMonth": "Tháng trước",
+        "custom": "Tuỳ chọn"
+      },
+      "granularity": "Nhóm theo",
+      "DAY": "Ngày",
+      "WEEK": "Tuần",
+      "MONTH": "Tháng"
+    },
+    "revenue": {
+      "title": "Doanh thu",
+      "total": "Tổng doanh thu",
+      "bookings": "Lịch hẹn hoàn thành",
+      "byMethod": "Theo phương thức thanh toán",
+      "topServices": "Dịch vụ hàng đầu",
+      "service": "Dịch vụ",
+      "revenue": "Doanh thu",
+      "empty": "Không có doanh thu trong khoảng thời gian này"
+    },
+    "bookingsChart": {
+      "title": "Lịch hẹn theo trạng thái",
+      "total": "Tổng lịch hẹn",
+      "empty": "Không có lịch hẹn trong khoảng thời gian này"
+    },
+    "staff": {
+      "title": "Hiệu suất nhân viên",
+      "name": "Nhân viên",
+      "bookings": "Lịch hẹn",
+      "completed": "Hoàn thành",
+      "noShows": "Không đến",
+      "revenue": "Doanh thu",
+      "rating": "Xếp hạng",
+      "utilisation": "Hiệu suất sử dụng",
+      "inactive": "Ngưng hoạt động",
+      "empty": "Không có dữ liệu nhân viên"
+    },
+    "export": {
+      "title": "Xuất dữ liệu",
+      "excel": "Excel",
+      "pdf": "PDF",
+      "revenue": "Doanh thu",
+      "bookings": "Lịch hẹn",
+      "staff": "Nhân viên",
+      "started": "Đã bắt đầu tải xuống",
+      "failed": "Xuất dữ liệu thất bại"
+    }
+  },
+  "platform": {
+    "nav": {
+      "overview": "Tổng quan",
+      "salons": "Salon",
+      "users": "Người dùng",
+      "categories": "Danh mục",
+      "amenities": "Tiện ích",
+      "payouts": "Thanh toán cho salon",
+      "auditLogs": "Nhật ký hệ thống",
+      "backToDashboard": "Về tổng quan salon"
+    },
+    "overview": {
+      "title": "Tổng quan nền tảng",
+      "description": "Tình hình toàn bộ nền tảng trong 30 ngày qua.",
+      "salons": "Salon",
+      "users": "Người dùng",
+      "bookings30": "Lịch hẹn (30 ngày)",
+      "revenue30": "Doanh thu (30 ngày)",
+      "topSalons": "Salon dẫn đầu theo doanh thu",
+      "salon": "Salon",
+      "completedBookings": "Lịch hẹn hoàn thành",
+      "revenue": "Doanh thu",
+      "noRevenue": "Chưa có doanh thu",
+      "salonStatus": {
+        "PENDING": "Chờ phê duyệt",
+        "ACTIVE": "Đang hoạt động",
+        "SUSPENDED": "Đã tạm ngưng"
+      }
+    },
+    "salons": {
+      "title": "Salon",
+      "description": "Phê duyệt salon mới, tạm ngưng salon vi phạm và thiết lập hoa hồng nền tảng.",
+      "empty": "Không có salon nào",
+      "columns": {
+        "salon": "Salon",
+        "location": "Địa điểm",
+        "rating": "Xếp hạng",
+        "status": "Trạng thái"
+      },
+      "approve": "Phê duyệt",
+      "suspend": "Tạm ngưng",
+      "commission": "Hoa hồng",
+      "approved": "Đã phê duyệt salon",
+      "suspended": "Đã tạm ngưng salon",
+      "suspendTitle": "Tạm ngưng salon?",
+      "suspendDescription": "\"{name}\" sẽ biến mất khỏi ứng dụng khách hàng và ngừng nhận lịch hẹn.",
+      "commissionDialog": {
+        "title": "Hoa hồng nền tảng",
+        "description": "Phần trăm doanh thu trực tuyến nền tảng giữ lại đối với {name}.",
+        "percent": "Hoa hồng (%)",
+        "invalid": "Nhập phần trăm từ 0 đến 100.",
+        "saved": "Đã lưu hoa hồng"
+      }
+    },
+    "users": {
+      "title": "Người dùng",
+      "description": "Tất cả tài khoản trên nền tảng: chủ salon, nhân viên và khách hàng.",
+      "searchPlaceholder": "Tìm theo tên hoặc email",
+      "empty": "Không có người dùng nào",
+      "columns": {
+        "user": "Người dùng",
+        "role": "Vai trò",
+        "status": "Trạng thái",
+        "provider": "Đăng nhập",
+        "createdAt": "Ngày tham gia"
+      },
+      "role": {
+        "SUPER_ADMIN": "Super admin",
+        "SALON_OWNER": "Chủ salon",
+        "STAFF": "Nhân viên",
+        "CUSTOMER": "Khách hàng"
+      },
+      "status": {
+        "ACTIVE": "Đang hoạt động",
+        "SUSPENDED": "Đã tạm ngưng",
+        "DELETED": "Đã xoá"
+      },
+      "provider": {
+        "LOCAL": "Email",
+        "GOOGLE": "Google"
+      },
+      "suspend": "Tạm ngưng",
+      "activate": "Kích hoạt",
+      "changeRole": "Đổi vai trò",
+      "suspended": "Đã tạm ngưng người dùng",
+      "activated": "Đã kích hoạt người dùng",
+      "suspendTitle": "Tạm ngưng người dùng?",
+      "suspendDescription": "{name} sẽ bị đăng xuất và không thể đăng nhập cho đến khi được kích hoạt lại.",
+      "roleDialog": {
+        "title": "Đổi vai trò",
+        "description": "Chọn vai trò mới cho {name}.",
+        "role": "Vai trò",
+        "saved": "Đã cập nhật vai trò"
+      }
+    },
+    "catalog": {
+      "categories": {
+        "title": "Danh mục",
+        "description": "Danh mục salon hiển thị dưới dạng bộ lọc trong ứng dụng khách hàng.",
+        "add": "Thêm danh mục",
+        "name": "Tên",
+        "iconUrl": "URL biểu tượng",
+        "sortOrder": "Thứ tự hiển thị",
+        "empty": "Chưa có danh mục nào"
+      },
+      "amenities": {
+        "title": "Tiện ích",
+        "description": "Tiện ích salon có thể giới thiệu (Wi-Fi, bãi đỗ xe, ...).",
+        "add": "Thêm tiện ích",
+        "name": "Tên",
+        "icon": "Tên biểu tượng",
+        "empty": "Chưa có tiện ích nào"
+      },
+      "editTitle": "Sửa",
+      "createTitle": "Tạo mới",
+      "nameRequired": "Nhập tên.",
+      "created": "Đã tạo",
+      "updated": "Đã cập nhật",
+      "deleted": "Đã xoá",
+      "deleteTitle": "Xoá \"{name}\"?",
+      "deleteDescription": "Các salon đang dùng mục này sẽ mất liên kết tham chiếu."
+    },
+    "payouts": {
+      "title": "Thanh toán cho salon",
+      "description": "Doanh thu trực tuyến thu được theo từng salon, hoa hồng nền tảng và số tiền cần thanh toán.",
+      "empty": "Không có salon nào trong khoảng thời gian này",
+      "columns": {
+        "salon": "Salon",
+        "commission": "Hoa hồng %",
+        "onlineRevenue": "Doanh thu trực tuyến",
+        "commissionAmount": "Hoa hồng",
+        "payout": "Thanh toán cho salon",
+        "cash": "Tiền mặt (tại salon)"
+      },
+      "export": "Xuất Excel"
+    },
+    "auditLogs": {
+      "title": "Nhật ký hệ thống",
+      "description": "Ai đã thay đổi gì, trên toàn bộ các salon.",
+      "empty": "Không có bản ghi nào",
+      "entityPlaceholder": "Đối tượng (ví dụ: booking)",
+      "allActions": "Tất cả hành động",
+      "columns": {
+        "when": "Thời điểm",
+        "action": "Hành động",
+        "entity": "Đối tượng",
+        "actor": "Người thực hiện",
+        "salon": "Salon",
+        "diff": "Thay đổi"
+      },
+      "action": {
+        "BOOKING_CREATED": "Tạo lịch hẹn",
+        "BOOKING_STATUS_CHANGED": "Đổi trạng thái lịch hẹn",
+        "BOOKING_RESCHEDULED": "Đổi lịch hẹn",
+        "PAYMENT_REFUNDED": "Hoàn tiền thanh toán",
+        "SALON_UPDATED": "Cập nhật salon",
+        "SALON_SETTINGS_UPDATED": "Cập nhật cài đặt salon",
+        "SALON_STATUS_CHANGED": "Đổi trạng thái salon",
+        "STAFF_UPDATED": "Cập nhật nhân viên",
+        "USER_STATUS_CHANGED": "Đổi trạng thái người dùng",
+        "USER_DELETED": "Xoá người dùng"
+      }
+    }
+  }
+}
