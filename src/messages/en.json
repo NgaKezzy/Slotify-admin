@@ -100,8 +100,44 @@
       "bookingsToday": "Bookings today",
       "revenueToday": "Revenue today",
       "newCustomers": "New customers",
-      "pendingBookings": "Pending bookings"
-    }
+      "pendingBookings": "Pending bookings",
+      "revenue": "Revenue",
+      "bookings": "Bookings",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "noShow": "No-shows",
+      "averageTicket": "Average ticket",
+      "occupancy": "Occupancy",
+      "vsPrevious": "vs. previous period",
+      "noPrevious": "No previous data"
+    },
+    "period": {
+      "label": "Period",
+      "days7": "Last 7 days",
+      "days30": "Last 30 days",
+      "days90": "Last 90 days"
+    },
+    "revenueChart": {
+      "title": "Revenue",
+      "description": "Daily revenue for the selected period.",
+      "total": "Total",
+      "revenue": "Revenue",
+      "bookings": "Bookings",
+      "empty": "No revenue in this period yet."
+    },
+    "today": {
+      "title": "Today's bookings",
+      "upcoming": "{count} upcoming",
+      "empty": "No bookings scheduled for today.",
+      "viewAll": "View all bookings"
+    },
+    "liveFeed": {
+      "title": "Live feed",
+      "description": "Booking events as they happen.",
+      "empty": "Waiting for events...",
+      "clear": "Clear"
+    },
+    "error": "Could not load the dashboard."
   },
   "modules": {
     "bookings": {
@@ -172,5 +208,147 @@
   },
   "realtime": {
     "bookingEvent": "Booking {code}: {status}"
+  },
+  "bookings": {
+    "title": "Bookings",
+    "description": "Manage every booking of your salon.",
+    "newWalkIn": "New walk-in booking",
+    "filters": {
+      "search": "Search code, customer or email",
+      "status": "Status",
+      "allStatuses": "All statuses",
+      "staff": "Staff",
+      "allStaff": "All staff",
+      "from": "From",
+      "to": "To",
+      "reset": "Reset filters"
+    },
+    "columns": {
+      "code": "Code",
+      "customer": "Customer",
+      "services": "Services",
+      "staff": "Staff",
+      "start": "Start",
+      "status": "Status",
+      "payment": "Payment",
+      "total": "Total"
+    },
+    "empty": "No bookings match the current filters.",
+    "detail": {
+      "title": "Booking {code}",
+      "customer": "Customer",
+      "contact": "Contact",
+      "services": "Services",
+      "schedule": "Schedule",
+      "staff": "Staff",
+      "autoAssigned": "auto-assigned",
+      "payment": "Payment",
+      "method": "Method",
+      "subtotal": "Subtotal",
+      "discount": "Discount",
+      "total": "Total",
+      "coupon": "Coupon",
+      "note": "Note",
+      "cancelReason": "Cancellation reason",
+      "cancelledBy": "Cancelled by",
+      "createdAt": "Created",
+      "noNote": "No note"
+    },
+    "paymentMethod": {
+      "CASH": "Cash",
+      "STRIPE": "Card (Stripe)",
+      "PAYPAL": "PayPal"
+    },
+    "cancelledBy": {
+      "CUSTOMER": "Customer",
+      "SALON": "Salon",
+      "SYSTEM": "System"
+    },
+    "actions": {
+      "confirm": "Confirm",
+      "reject": "Reject",
+      "cancel": "Cancel booking",
+      "start": "Start",
+      "complete": "Complete",
+      "noShow": "No-show",
+      "reschedule": "Reschedule",
+      "markPaid": "Mark paid (cash)"
+    },
+    "reject": {
+      "title": "Reject booking",
+      "description": "The customer will be notified. Please give a reason.",
+      "reason": "Reason",
+      "submit": "Reject"
+    },
+    "cancel": {
+      "title": "Cancel booking",
+      "description": "This cannot be undone. Paid bookings are refunded automatically.",
+      "reason": "Reason",
+      "submit": "Cancel booking"
+    },
+    "reasonRequired": "A reason is required.",
+    "reschedule": {
+      "title": "Reschedule booking",
+      "description": "Pick a new date, time and optionally another staff member.",
+      "submit": "Reschedule"
+    },
+    "walkIn": {
+      "title": "New walk-in booking",
+      "description": "Create a booking for a customer at the counter or on the phone.",
+      "existingCustomer": "Existing customer (email)",
+      "newCustomer": "New customer",
+      "customerName": "Name",
+      "customerEmail": "Email",
+      "services": "Services",
+      "staff": "Staff",
+      "paymentMethod": "Payment method",
+      "note": "Note",
+      "submit": "Create booking",
+      "created": "Booking {code} created."
+    },
+    "slot": {
+      "date": "Date",
+      "staff": "Staff",
+      "anyStaff": "Any available staff",
+      "time": "Time",
+      "pickServices": "Select at least one service.",
+      "empty": "No free slots on this day.",
+      "loading": "Loading slots..."
+    },
+    "validation": {
+      "servicesRequired": "Select at least one service.",
+      "staffRequired": "Select a staff member.",
+      "slotRequired": "Pick a time slot.",
+      "customerRequired": "Enter the customer's email or a name.",
+      "invalidEmail": "Enter a valid email address.",
+      "nameRequired": "Name is required."
+    },
+    "toast": {
+      "confirm": "Booking confirmed.",
+      "reject": "Booking rejected.",
+      "cancel": "Booking cancelled.",
+      "start": "Booking started.",
+      "complete": "Booking completed.",
+      "noShow": "Marked as no-show.",
+      "markPaid": "Marked as paid.",
+      "rescheduled": "Booking rescheduled.",
+      "slotUnavailable": "That slot is no longer available."
+    }
+  },
+  "calendar": {
+    "title": "Calendar",
+    "description": "Drag a booking to reschedule it; click to open the details.",
+    "staffFilter": "Staff",
+    "allStaff": "All staff",
+    "legend": "Status",
+    "views": {
+      "day": "Day",
+      "week": "Week",
+      "month": "Month"
+    },
+    "today": "Today",
+    "rescheduled": "Booking moved.",
+    "slotUnavailable": "That slot is not available – the booking was put back.",
+    "error": "Could not load the calendar."
   }
 }

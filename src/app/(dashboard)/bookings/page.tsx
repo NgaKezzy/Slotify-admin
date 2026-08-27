@@ -1,16 +1,24 @@
 /**
- * Bookings module page (`/bookings`). Placeholder until the module is implemented in Phase 3.
+ * Bookings module page (`/bookings`): server-paginated list with filters in
+ * the URL, detail sheet with state-machine actions and walk-in creation.
+ * `BookingsView` reads `useSearchParams`, hence the Suspense boundary.
  */
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { Suspense } from "react";
 
-import { ModulePlaceholder } from "@/components/layout/module-placeholder";
+import { BookingsView } from "@/components/bookings/bookings-view";
+import { PageSkeleton } from "@/components/common/page-skeleton";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("modules.bookings");
+  const t = await getTranslations("bookings");
   return { title: t("title") };
 }
 
 export default function BookingsPage() {
-  return <ModulePlaceholder moduleKey="bookings" />;
+  return (
+    <Suspense fallback={<PageSkeleton />}>
+      <BookingsView />
+    </Suspense>
+  );
 }

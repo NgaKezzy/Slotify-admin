@@ -182,3 +182,34 @@
     @apply font-sans;
   }
 }
+
+/* ---------------------------------------------------------------------------
+ * FullCalendar (forma theme) — mapped onto the admin tokens so the calendar
+ * follows the brand colours and dark mode automatically. Event colours are
+ * set per event from the `--status-*` tokens in `booking-calendar.tsx`.
+ * ------------------------------------------------------------------------- */
+.slotify-calendar {
+  --fc-forma-primary: var(--primary);
+  --fc-forma-primary-over: color-mix(in oklch, var(--primary) 90%, var(--foreground));
+  --fc-forma-primary-down: color-mix(in oklch, var(--primary) 80%, var(--foreground));
+  --fc-forma-primary-foreground: var(--primary-foreground);
+  --fc-forma-event: var(--status-confirmed);
+  --fc-forma-event-contrast: var(--background);
+  --fc-forma-background-event: var(--primary);
+  --fc-forma-highlight: color-mix(in oklch, var(--primary) 20%, transparent);
+  --fc-forma-background: var(--card);
+  --fc-forma-faint: color-mix(in oklch, var(--foreground) 4%, transparent);
+  --fc-forma-muted: var(--muted);
+  --fc-forma-strong: color-mix(in oklch, var(--foreground) 12%, transparent);
+  --fc-forma-stronger: color-mix(in oklch, var(--foreground) 16%, transparent);
+  --fc-forma-strongest: color-mix(in oklch, var(--foreground) 20%, transparent);
+  --fc-forma-foreground: var(--card-foreground);
+  --fc-forma-faint-foreground: color-mix(in oklch, var(--muted-foreground) 70%, transparent);
+  --fc-forma-muted-foreground: var(--muted-foreground);
+  --fc-forma-border: var(--border);
+  --fc-forma-muted-border: var(--border);
+  --fc-forma-strong-border: color-mix(in oklch, var(--border) 60%, var(--foreground));
+  --fc-forma-ring-color: var(--ring);
+  --fc-forma-border-style: solid;
+  font-size: 0.875rem;
+}
