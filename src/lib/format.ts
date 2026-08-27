@@ -59,3 +59,72 @@ export function formatPercent(value: number, locale?: string): string {
     value / 100
   );
 }
+
+/** Milliseconds in one day, used for date arithmetic on period selectors. */
+export const DAY_MS = 86_400_000;
+
+/**
+ * Builds an inclusive `YYYY-MM-DD` range ending today (salon timezone) and
+ * spanning `days` days, e.g. `{ from: "2026-08-21", to: "2026-08-27" }` for 7 days.
+ * @param days Number of days including today.
+ * @param timeZone Salon timezone.
+ */
+export function lastDaysRange(days: number, timeZone: string): { from: string; to: string } {
+  const now = new Date();
+  return {
+    from: toIsoDate(new Date(now.getTime() - (days - 1) * DAY_MS), timeZone),
+    to: toIsoDate(now, timeZone),
+  };
+}
+
+/**
+ * Relative change between two values in percent, or `null` when the previous
+ * value is zero (no meaningful comparison).
+ * @param current Current period value.
+ * @param previous Previous period value.
+ */
+export function percentChange(current: number, previous: number): number | null {
+  if (previous === 0) return null;
+  return ((current - previous) / Math.abs(previous)) * 100;
+}
+
+/** Offset of `timeZone` from UTC at the given instant, in minutes. */
+function timeZoneOffsetMinutes(at: Date, timeZone: string): number {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone,
+    hourCycle: "h23",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  }).formatToParts(at);
+  const get = (type: string) => Number(parts.find((p) => p.type === type)?.value ?? 0);
+  const wallClockAsUtc = Date.UTC(
+    get("year"),
+    get("month") - 1,
+    get("day"),
+    get("hour"),
+    get("minute"),
+    get("second")
+  );
+  return (wallClockAsUtc - at.getTime()) / 60_000;
+}
+
+/**
+ * ISO instant of local midnight on a `YYYY-MM-DD` date in the given timezone.
+ * Used to turn date filters into the date-time range the API expects.
+ * @param date Calendar date in the salon timezone.
+ * @param timeZone IANA timezone.
+ */
+export function startOfDayInZone(date: string, timeZone: string): string {
+  const guess = new Date(`${date}T00:00:00Z`);
+  return new Date(guess.getTime() - timeZoneOffsetMinutes(guess, timeZone) * 60_000).toISOString();
+}
+
+/** ISO instant of the last millisecond of a `YYYY-MM-DD` date in the given timezone. */
+export function endOfDayInZone(date: string, timeZone: string): string {
+  const start = new Date(startOfDayInZone(date, timeZone)).getTime();
+  return new Date(start + DAY_MS - 1).toISOString();
+}

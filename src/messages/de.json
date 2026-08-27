@@ -99,9 +99,45 @@
     "kpi": {
       "bookingsToday": "Bookings today",
       "revenueToday": "Revenue today",
-      "newCustomers": "New customers",
-      "pendingBookings": "Pending bookings"
-    }
+      "newCustomers": "Neue Kunden",
+      "pendingBookings": "Pending bookings",
+      "revenue": "Umsatz",
+      "bookings": "Buchungen",
+      "completed": "Abgeschlossen",
+      "cancelled": "Storniert",
+      "noShow": "Nicht erschienen",
+      "averageTicket": "Ø Bon",
+      "occupancy": "Auslastung",
+      "vsPrevious": "vs. Vorperiode",
+      "noPrevious": "Keine Vergleichsdaten"
+    },
+    "period": {
+      "label": "Zeitraum",
+      "days7": "Letzte 7 Tage",
+      "days30": "Letzte 30 Tage",
+      "days90": "Letzte 90 Tage"
+    },
+    "revenueChart": {
+      "title": "Umsatz",
+      "description": "Täglicher Umsatz im gewählten Zeitraum.",
+      "total": "Gesamt",
+      "revenue": "Umsatz",
+      "bookings": "Buchungen",
+      "empty": "Noch kein Umsatz in diesem Zeitraum."
+    },
+    "today": {
+      "title": "Heutige Buchungen",
+      "upcoming": "{count} bevorstehend",
+      "empty": "Heute sind keine Buchungen geplant.",
+      "viewAll": "Alle Buchungen"
+    },
+    "liveFeed": {
+      "title": "Live-Feed",
+      "description": "Buchungsereignisse in Echtzeit.",
+      "empty": "Warte auf Ereignisse...",
+      "clear": "Leeren"
+    },
+    "error": "Das Dashboard konnte nicht geladen werden."
   },
   "modules": {
     "bookings": {
@@ -172,5 +208,147 @@
   },
   "realtime": {
     "bookingEvent": "Buchung {code}: {status}"
+  },
+  "bookings": {
+    "title": "Buchungen",
+    "description": "Alle Buchungen Ihres Salons verwalten.",
+    "newWalkIn": "Neue Laufkundschaft-Buchung",
+    "filters": {
+      "search": "Code, Kunde oder E-Mail suchen",
+      "status": "Status",
+      "allStatuses": "Alle Status",
+      "staff": "Mitarbeiter",
+      "allStaff": "Alle Mitarbeiter",
+      "from": "Von",
+      "to": "Bis",
+      "reset": "Filter zurücksetzen"
+    },
+    "columns": {
+      "code": "Code",
+      "customer": "Kunde",
+      "services": "Leistungen",
+      "staff": "Mitarbeiter",
+      "start": "Beginn",
+      "status": "Status",
+      "payment": "Zahlung",
+      "total": "Gesamt"
+    },
+    "empty": "Keine Buchungen entsprechen den Filtern.",
+    "detail": {
+      "title": "Buchung {code}",
+      "customer": "Kunde",
+      "contact": "Kontakt",
+      "services": "Leistungen",
+      "schedule": "Termin",
+      "staff": "Mitarbeiter",
+      "autoAssigned": "automatisch zugewiesen",
+      "payment": "Zahlung",
+      "method": "Zahlungsart",
+      "subtotal": "Zwischensumme",
+      "discount": "Rabatt",
+      "total": "Gesamt",
+      "coupon": "Gutschein",
+      "note": "Notiz",
+      "cancelReason": "Stornogrund",
+      "cancelledBy": "Storniert von",
+      "createdAt": "Erstellt",
+      "noNote": "Keine Notiz"
+    },
+    "paymentMethod": {
+      "CASH": "Bar",
+      "STRIPE": "Karte (Stripe)",
+      "PAYPAL": "PayPal"
+    },
+    "cancelledBy": {
+      "CUSTOMER": "Kunde",
+      "SALON": "Salon",
+      "SYSTEM": "System"
+    },
+    "actions": {
+      "confirm": "Bestätigen",
+      "reject": "Ablehnen",
+      "cancel": "Buchung stornieren",
+      "start": "Starten",
+      "complete": "Abschließen",
+      "noShow": "Nicht erschienen",
+      "reschedule": "Verschieben",
+      "markPaid": "Als bezahlt markieren (bar)"
+    },
+    "reject": {
+      "title": "Buchung ablehnen",
+      "description": "Der Kunde wird benachrichtigt. Bitte geben Sie einen Grund an.",
+      "reason": "Grund",
+      "submit": "Ablehnen"
+    },
+    "cancel": {
+      "title": "Buchung stornieren",
+      "description": "Dies kann nicht rückgängig gemacht werden. Bezahlte Buchungen werden automatisch erstattet.",
+      "reason": "Grund",
+      "submit": "Buchung stornieren"
+    },
+    "reasonRequired": "Ein Grund ist erforderlich.",
+    "reschedule": {
+      "title": "Buchung verschieben",
+      "description": "Wählen Sie ein neues Datum, eine Uhrzeit und optional einen anderen Mitarbeiter.",
+      "submit": "Verschieben"
+    },
+    "walkIn": {
+      "title": "Neue Laufkundschaft-Buchung",
+      "description": "Buchung für einen Kunden am Tresen oder am Telefon anlegen.",
+      "existingCustomer": "Bestandskunde (E-Mail)",
+      "newCustomer": "Neuer Kunde",
+      "customerName": "Name",
+      "customerEmail": "E-Mail",
+      "services": "Leistungen",
+      "staff": "Mitarbeiter",
+      "paymentMethod": "Zahlungsart",
+      "note": "Notiz",
+      "submit": "Buchung anlegen",
+      "created": "Buchung {code} angelegt."
+    },
+    "slot": {
+      "date": "Datum",
+      "staff": "Mitarbeiter",
+      "anyStaff": "Beliebiger freier Mitarbeiter",
+      "time": "Uhrzeit",
+      "pickServices": "Wählen Sie mindestens eine Leistung.",
+      "empty": "An diesem Tag sind keine Termine frei.",
+      "loading": "Termine werden geladen..."
+    },
+    "validation": {
+      "servicesRequired": "Wählen Sie mindestens eine Leistung.",
+      "staffRequired": "Wählen Sie einen Mitarbeiter.",
+      "slotRequired": "Wählen Sie eine Uhrzeit.",
+      "customerRequired": "Geben Sie die E-Mail oder einen Namen des Kunden ein.",
+      "invalidEmail": "Geben Sie eine gültige E-Mail-Adresse ein.",
+      "nameRequired": "Name ist erforderlich."
+    },
+    "toast": {
+      "confirm": "Buchung bestätigt.",
+      "reject": "Buchung abgelehnt.",
+      "cancel": "Buchung storniert.",
+      "start": "Buchung gestartet.",
+      "complete": "Buchung abgeschlossen.",
+      "noShow": "Als nicht erschienen markiert.",
+      "markPaid": "Als bezahlt markiert.",
+      "rescheduled": "Buchung verschoben.",
+      "slotUnavailable": "Dieser Termin ist nicht mehr verfügbar."
+    }
+  },
+  "calendar": {
+    "title": "Kalender",
+    "description": "Buchung ziehen, um sie zu verschieben; klicken für Details.",
+    "staffFilter": "Mitarbeiter",
+    "allStaff": "Alle Mitarbeiter",
+    "legend": "Status",
+    "views": {
+      "day": "Tag",
+      "week": "Woche",
+      "month": "Monat"
+    },
+    "today": "Heute",
+    "rescheduled": "Buchung verschoben.",
+    "slotUnavailable": "Dieser Termin ist nicht verfügbar – die Buchung wurde zurückgesetzt.",
+    "error": "Der Kalender konnte nicht geladen werden."
   }
 }
