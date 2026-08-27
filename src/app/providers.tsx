@@ -2,10 +2,11 @@
 
 /**
  * Client-side providers shared by every page: next-themes (dark/light),
- * next-intl (translations), TanStack Query (server state) and Sonner toasts.
+ * next-intl (translations), Auth.js session, TanStack Query (server state) and Sonner toasts.
  * Rendered once from `src/app/layout.tsx`.
  */
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { SessionProvider } from "next-auth/react";
 import { NextIntlClientProvider, type AbstractIntlMessages } from "next-intl";
 import { ThemeProvider } from "next-themes";
 import { useState, type ReactNode } from "react";
@@ -34,10 +35,12 @@ export function Providers({ locale, messages, timeZone, children }: ProvidersPro
   return (
     <NextIntlClientProvider locale={locale} messages={messages} timeZone={timeZone}>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-        <QueryClientProvider client={queryClient}>
-          {children}
-          <Toaster position="top-right" richColors />
-        </QueryClientProvider>
+        <SessionProvider refetchOnWindowFocus={false}>
+          <QueryClientProvider client={queryClient}>
+            {children}
+            <Toaster position="top-right" richColors />
+          </QueryClientProvider>
+        </SessionProvider>
       </ThemeProvider>
     </NextIntlClientProvider>
   );

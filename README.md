@@ -83,4 +83,5 @@ docker run -p 3000:3000 --env-file .env.local slotify-admin
 ```
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for the request flow and how to add a module.
+
 # Slotify-admin

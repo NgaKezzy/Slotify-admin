@@ -10,7 +10,31 @@
     "locale": {
       "en": "English",
       "de": "German"
-    }
+    },
+    "noResults": "Keine Ergebnisse",
+    "pageOf": "Seite {page} von {total}",
+    "totalItems": "{count} Einträge",
+    "previous": "Zurück",
+    "next": "Weiter",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "create": "Erstellen",
+    "search": "Suchen",
+    "actions": "Aktionen",
+    "saved": "Gespeichert",
+    "error": "Etwas ist schiefgelaufen",
+    "refresh": "Aktualisieren",
+    "all": "Alle",
+    "from": "Von",
+    "to": "Bis",
+    "yes": "Ja",
+    "no": "Nein",
+    "close": "Schließen",
+    "back": "Zurück",
+    "optional": "Optional"
   },
   "theme": {
     "toggle": "Toggle theme",
@@ -59,7 +83,10 @@
   "salonSwitcher": {
     "label": "Current salon",
     "placeholder": "Select salon",
-    "demoSalon": "Demo Salon"
+    "none": "Kein Salon",
+    "create": "Salon erstellen",
+    "noneTitle": "Sie haben noch keinen Salon",
+    "noneDescription": "Erstellen Sie Ihren ersten Salon, um Buchungen, Mitarbeiter und Leistungen zu verwalten."
   },
   "userMenu": {
     "open": "Open user menu",
@@ -120,6 +147,30 @@
     "platform": {
       "title": "Platform",
       "description": "Super admin area: salon approval, users, categories and platform settings."
+    },
+    "newSalon": {
+      "title": "Salon erstellen",
+      "description": "Das Salon-Formular kommt mit dem Einstellungsmodul."
     }
+  },
+  "status": {
+    "booking": {
+      "PENDING": "Ausstehend",
+      "CONFIRMED": "Bestätigt",
+      "IN_PROGRESS": "Läuft",
+      "COMPLETED": "Abgeschlossen",
+      "CANCELLED": "Storniert",
+      "NO_SHOW": "Nicht erschienen",
+      "REJECTED": "Abgelehnt"
+    },
+    "payment": {
+      "UNPAID": "Unbezahlt",
+      "PAID": "Bezahlt",
+      "PARTIALLY_PAID": "Teilweise bezahlt",
+      "REFUNDED": "Erstattet"
+    }
+  },
+  "realtime": {
+    "bookingEvent": "Buchung {code}: {status}"
   }
 }

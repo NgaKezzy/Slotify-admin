@@ -10,7 +10,31 @@
     "locale": {
       "en": "English",
       "de": "German"
-    }
+    },
+    "noResults": "No results",
+    "pageOf": "Page {page} of {total}",
+    "totalItems": "{count} items",
+    "previous": "Previous",
+    "next": "Next",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search",
+    "actions": "Actions",
+    "saved": "Saved",
+    "error": "Something went wrong",
+    "refresh": "Refresh",
+    "all": "All",
+    "from": "From",
+    "to": "To",
+    "yes": "Yes",
+    "no": "No",
+    "close": "Close",
+    "back": "Back",
+    "optional": "Optional"
   },
   "theme": {
     "toggle": "Toggle theme",
@@ -59,7 +83,10 @@
   "salonSwitcher": {
     "label": "Current salon",
     "placeholder": "Select salon",
-    "demoSalon": "Demo Salon"
+    "none": "No salon",
+    "create": "Create a salon",
+    "noneTitle": "You have no salon yet",
+    "noneDescription": "Create your first salon to start managing bookings, staff and services."
   },
   "userMenu": {
     "open": "Open user menu",
@@ -120,6 +147,30 @@
     "platform": {
       "title": "Platform",
       "description": "Super admin area: salon approval, users, categories and platform settings."
+    },
+    "newSalon": {
+      "title": "Create a salon",
+      "description": "The salon form arrives with the settings module."
     }
+  },
+  "status": {
+    "booking": {
+      "PENDING": "Pending",
+      "CONFIRMED": "Confirmed",
+      "IN_PROGRESS": "In progress",
+      "COMPLETED": "Completed",
+      "CANCELLED": "Cancelled",
+      "NO_SHOW": "No-show",
+      "REJECTED": "Rejected"
+    },
+    "payment": {
+      "UNPAID": "Unpaid",
+      "PAID": "Paid",
+      "PARTIALLY_PAID": "Partially paid",
+      "REFUNDED": "Refunded"
+    }
+  },
+  "realtime": {
+    "bookingEvent": "Booking {code}: {status}"
   }
 }

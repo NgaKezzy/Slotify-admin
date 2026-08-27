@@ -5,13 +5,18 @@
  */
 import { useQuery } from "@tanstack/react-query";
 
-import { api } from "@/lib/api-client";
+import { api, unwrap } from "@/lib/api-client";
+import type { components } from "@/types/api";
 
 /** Query parameters accepted by the bookings list endpoint. */
 export interface BookingsListParams {
   page?: number;
   size?: number;
-  status?: string;
+  status?: components["schemas"]["BookingResponse"]["status"];
+  staffId?: number;
+  from?: string;
+  to?: string;
+  q?: string;
 }
 
 /** Query keys for bookings; use these when invalidating after mutations or WebSocket events. */
@@ -30,12 +35,11 @@ export const bookingKeys = {
 export function useBookings(salonId: number, params: BookingsListParams = {}) {
   return useQuery({
     queryKey: bookingKeys.list(salonId, params),
-    queryFn: async () => {
-      const { data, error } = await api.GET("/api/v1/admin/salons/{salonId}/bookings", {
-        params: { path: { salonId }, query: params },
-      });
-      if (error) throw error;
-      return data.data;
-    },
+    queryFn: async () =>
+      unwrap(
+        await api.GET("/api/v1/admin/salons/{salonId}/bookings", {
+          params: { path: { salonId }, query: params },
+        })
+      ),
   });
 }
