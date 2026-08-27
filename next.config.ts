@@ -9,7 +9,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  // output: "standalone" is only needed for Docker; Vercel handles deployment natively.
   typedRoutes: true,
   // Do not generate AGENTS.md / CLAUDE.md files in the repo.
   agentRules: false,
