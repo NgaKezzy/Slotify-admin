@@ -850,7 +850,8 @@ export interface paths {
             path?: never;
             cookie?: never;
         };
-        get?: never;
+        /** List upcoming shift overrides of a staff member */
+        get: operations["listOverrides"];
         put?: never;
         /** Create or replace a per-date shift override (day off or custom window) */
         post: operations["createOverride"];
@@ -3080,6 +3081,14 @@ export interface components {
             data: components["schemas"]["StaffResponse"][];
             errors: components["schemas"]["ApiError"][];
         };
+        ApiResponseListShiftOverrideResponse: {
+            success: boolean;
+            /** Format: int32 */
+            code: number;
+            message: string;
+            data: components["schemas"]["ShiftOverrideResponse"][];
+            errors: components["schemas"]["ApiError"][];
+        };
         ApiResponseStaffPerformanceResponse: {
             success: boolean;
             /** Format: int32 */
@@ -3095,7 +3104,12 @@ export interface components {
             to: string;
             timezone: string;
         };
-        Row: {
+        StaffPerformanceResponse: {
+            period: components["schemas"]["PeriodDto"];
+            currency: string;
+            staff: components["schemas"]["StaffPerformanceResponseRow"][];
+        };
+        StaffPerformanceResponseRow: {
             /** Format: int64 */
             staffId: number;
             displayName: string;
@@ -3112,11 +3126,6 @@ export interface components {
             /** Format: double */
             utilisationPercent: number;
         };
-        StaffPerformanceResponse: {
-            period: components["schemas"]["PeriodDto"];
-            currency: string;
-            staff: components["schemas"]["Row"][];
-        };
         ApiResponseRevenueReportResponse: {
             success: boolean;
             /** Format: int32 */
@@ -3132,14 +3141,6 @@ export interface components {
             /** Format: int64 */
             bookings: number;
         };
-        Point: {
-            /** Format: date */
-            periodStart: string;
-            /** Format: int64 */
-            revenueMinor: number;
-            /** Format: int64 */
-            bookings: number;
-        };
         RevenueReportResponse: {
             period: components["schemas"]["PeriodDto"];
             /** @enum {string} */
@@ -3147,9 +3148,17 @@ export interface components {
             currency: string;
             /** Format: int64 */
             totalRevenueMinor: number;
-            series: components["schemas"]["Point"][];
+            series: components["schemas"]["RevenueReportResponsePoint"][];
             byPaymentMethod: components["schemas"]["PaymentMethodRevenue"][];
             byService: components["schemas"]["ServiceRevenue"][];
+        };
+        RevenueReportResponsePoint: {
+            /** Format: date */
+            periodStart: string;
+            /** Format: int64 */
+            revenueMinor: number;
+            /** Format: int64 */
+            bookings: number;
         };
         ServiceRevenue: {
             /** Format: int64 */
@@ -3223,7 +3232,16 @@ export interface components {
             totals: {
                 [key: string]: number;
             };
-            series: components["schemas"]["Point"][];
+            series: components["schemas"]["BookingsReportResponsePoint"][];
+        };
+        BookingsReportResponsePoint: {
+            /** Format: date */
+            periodStart: string;
+            /** Format: int64 */
+            total: number;
+            counts: {
+                [key: string]: number;
+            };
         };
         ApiResponsePageResponsePaymentResponse: {
             success: boolean;
@@ -3381,7 +3399,22 @@ export interface components {
         };
         PayoutsReportResponse: {
             period: components["schemas"]["PeriodDto"];
-            rows: components["schemas"]["Row"][];
+            rows: components["schemas"]["PayoutsReportResponseRow"][];
+        };
+        PayoutsReportResponseRow: {
+            /** Format: int64 */
+            salonId: number;
+            salonName: string;
+            currency: string;
+            commissionPercent: number;
+            /** Format: int64 */
+            onlineRevenueMinor: number;
+            /** Format: int64 */
+            commissionMinor: number;
+            /** Format: int64 */
+            payoutMinor: number;
+            /** Format: int64 */
+            cashRevenueMinor: number;
         };
         ApiResponsePlatformOverviewResponse: {
             success: boolean;
@@ -5069,6 +5102,29 @@ export interface operations {
                 };
                 content: {
                     "*/*": components["schemas"]["ApiResponseTimeOffResponse"];
+                };
+            };
+        };
+    };
+    listOverrides: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                salonId: number;
+                staffId: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["ApiResponseListShiftOverrideResponse"];
                 };
             };
         };
