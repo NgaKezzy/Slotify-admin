@@ -2,8 +2,6 @@
  * TanStack Query hooks for the SUPER_ADMIN platform area: overview KPIs,
  * salon approval/suspension/commission, user management, payouts report and
  * audit logs. Categories and amenities live in `use-platform-catalog.ts`.
- *
- * The OpenAPI generator names nested DTOs by their Java simple name, so the
  */
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
@@ -24,7 +22,6 @@ export type PayoutRow = components["schemas"]["PayoutsReportResponseRow"];
 
 /** Payouts report: one row per active salon for the period. */
 export type PayoutsReport = components["schemas"]["PayoutsReportResponse"];
-};
 
 export interface PlatformUsersParams {
   q?: string;
