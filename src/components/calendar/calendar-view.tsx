@@ -27,7 +27,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { useRescheduleBookingMutation, type Booking } from "@/hooks/use-bookings";
 import { useCalendarBookings } from "@/hooks/use-calendar";
 import { useCurrentSalon } from "@/hooks/use-salons";
-import { useStaff } from "@/hooks/use-staff";
+import { useStaffList } from "@/hooks/use-staff";
 import { ErrorCodes, toApiError } from "@/lib/api-error";
 
 const BookingCalendar = dynamic(
@@ -58,7 +58,7 @@ function CalendarContent({ salonId }: { salonId: number }) {
   const t = useTranslations("calendar");
   const tBookings = useTranslations("bookings");
   const { timezone } = useCurrentSalon();
-  const staff = useStaff(salonId);
+  const staff = useStaffList(salonId);
   const [range, setRange] = useState<CalendarRange>({ from: "", to: "" });
   const [staffId, setStaffId] = useState(ALL);
   const [selected, setSelected] = useState<Booking | null>(null);

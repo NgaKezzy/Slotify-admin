@@ -127,4 +127,30 @@ export function startOfDayInZone(date: string, timeZone: string): string {
 export function endOfDayInZone(date: string, timeZone: string): string {
   const start = new Date(startOfDayInZone(date, timeZone)).getTime();
   return new Date(start + DAY_MS - 1).toISOString();
+/**
+ * Normalises an API time ("09:00:00") to the `HH:MM` value an `<input type="time">` expects.
+ * @param time Time string from the API, possibly with seconds.
+ */
+export function toTimeInputValue(time: string | undefined): string {
+  return time ? time.slice(0, 5) : "";
+}
+
+/**
+ * Converts an ISO instant to the `YYYY-MM-DDTHH:MM` value of an `<input type="datetime-local">`
+ * in the browser's timezone (empty when the instant is missing).
+ * @param iso ISO-8601 instant from the API.
+ */
+export function toDateTimeInputValue(iso: string | undefined): string {
+  if (!iso) return "";
+  const date = new Date(iso);
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}`;
+}
+
+/**
+ * Converts a `datetime-local` input value (browser timezone) to the ISO instant the API expects.
+ * @param value Input value such as `2026-08-27T14:30`; empty returns undefined.
+ */
+export function fromDateTimeInputValue(value: string): string | undefined {
+  return value ? new Date(value).toISOString() : undefined;
 }

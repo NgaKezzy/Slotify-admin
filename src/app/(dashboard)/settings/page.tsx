@@ -1,16 +1,16 @@
 /**
- * Settings module page (`/settings`). Placeholder until the module is implemented in Phase 3.
+ * Settings module page (`/settings`): salon profile, opening hours, booking rules and gallery.
  */
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-import { ModulePlaceholder } from "@/components/layout/module-placeholder";
+import { SettingsTabs } from "@/components/settings/settings-tabs";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("modules.settings");
+  const t = await getTranslations("settings");
   return { title: t("title") };
 }
 
 export default function SettingsPage() {
-  return <ModulePlaceholder moduleKey="settings" />;
+  return <SettingsTabs />;
 }

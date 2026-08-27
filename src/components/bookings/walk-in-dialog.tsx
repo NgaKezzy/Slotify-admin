@@ -38,7 +38,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useCreateWalkInMutation, type PaymentMethod } from "@/hooks/use-bookings";
 import { useCurrentSalon } from "@/hooks/use-salons";
 import { useServices } from "@/hooks/use-services";
-import { useStaff } from "@/hooks/use-staff";
+import { useStaffList } from "@/hooks/use-staff";
 import { toApiError } from "@/lib/api-error";
 import { formatDuration, toIsoDate } from "@/lib/format";
 
@@ -87,7 +87,7 @@ export function WalkInDialog({ salonId, open, onOpenChange }: WalkInDialogProps)
   const tCommon = useTranslations("common");
   const { timezone } = useCurrentSalon();
   const services = useServices(salonId);
-  const staff = useStaff(salonId);
+  const staff = useStaffList(salonId);
   const mutation = useCreateWalkInMutation(salonId);
 
   const form = useForm<FormValues>({

@@ -1,16 +1,16 @@
 /**
- * Staff module page (`/staff`). Placeholder until the module is implemented in Phase 3.
+ * Staff module page (`/staff`): team list with create/edit/delete actions.
  */
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-import { ModulePlaceholder } from "@/components/layout/module-placeholder";
+import { StaffList } from "@/components/staff/staff-list";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("modules.staff");
+  const t = await getTranslations("staff");
   return { title: t("title") };
 }
 
 export default function StaffPage() {
-  return <ModulePlaceholder moduleKey="staff" />;
+  return <StaffList />;
 }

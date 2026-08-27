@@ -27,7 +27,7 @@ import { PageHeader } from "@/components/layout/page-header";
 import { Button } from "@/components/ui/button";
 import { useBookings, type Booking, type BookingsListParams } from "@/hooks/use-bookings";
 import { useCurrentSalon } from "@/hooks/use-salons";
-import { useStaff } from "@/hooks/use-staff";
+import { useStaffList } from "@/hooks/use-staff";
 import { endOfDayInZone, startOfDayInZone } from "@/lib/format";
 
 /** Rows per page of the bookings table. */
@@ -97,7 +97,7 @@ function BookingsTable({ salonId }: { salonId: number }) {
   const { timezone } = useCurrentSalon();
   const filters = readFilters(searchParams);
   const bookings = useBookings(salonId, toListParams(filters, timezone));
-  const staff = useStaff(salonId);
+  const staff = useStaffList(salonId);
   const [selected, setSelected] = useState<Booking | null>(null);
 
   // The sheet shows the freshest copy of the selected booking after mutations.

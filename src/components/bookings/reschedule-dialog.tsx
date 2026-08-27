@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/dialog";
 import { useRescheduleBookingMutation, type Booking } from "@/hooks/use-bookings";
 import { useCurrentSalon } from "@/hooks/use-salons";
-import { useStaff } from "@/hooks/use-staff";
+import { useStaffList } from "@/hooks/use-staff";
 import { ErrorCodes, toApiError } from "@/lib/api-error";
 import { toIsoDate } from "@/lib/format";
 
@@ -53,7 +53,7 @@ function RescheduleForm({ salonId, booking, onOpenChange }: Omit<RescheduleDialo
   const t = useTranslations("bookings");
   const tCommon = useTranslations("common");
   const { timezone } = useCurrentSalon();
-  const staff = useStaff(salonId);
+  const staff = useStaffList(salonId);
   const mutation = useRescheduleBookingMutation(salonId);
   const [value, setValue] = useState<SlotPickerValue>(() => ({
     date: toIsoDate(new Date(booking.startAt), timezone),

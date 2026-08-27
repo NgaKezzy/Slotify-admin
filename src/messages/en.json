@@ -34,7 +34,33 @@
     "no": "No",
     "close": "Close",
     "back": "Back",
-    "optional": "Optional"
+    "optional": "Optional",
+    "active": "Active",
+    "inactive": "Inactive",
+    "add": "Add",
+    "remove": "Remove",
+    "none": "None",
+    "saving": "Saving...",
+    "moveUp": "Move up",
+    "moveDown": "Move down",
+    "notFound": "Not found",
+    "upload": {
+      "choose": "Choose image",
+      "uploading": "Uploading...",
+      "remove": "Remove image",
+      "failed": "Upload failed: {message}"
+    },
+    "days": {
+      "MONDAY": "Monday",
+      "TUESDAY": "Tuesday",
+      "WEDNESDAY": "Wednesday",
+      "THURSDAY": "Thursday",
+      "FRIDAY": "Friday",
+      "SATURDAY": "Saturday",
+      "SUNDAY": "Sunday"
+    },
+    "minutes": "{count} min",
+    "daysCount": "{count} days"
   },
   "theme": {
     "toggle": "Toggle theme",
@@ -350,5 +376,278 @@
     "rescheduled": "Booking moved.",
     "slotUnavailable": "That slot is not available – the booking was put back.",
     "error": "Could not load the calendar."
+  },
+  "validation": {
+    "required": "This field is required.",
+    "invalidEmail": "Enter a valid email address.",
+    "positive": "Must be greater than 0.",
+    "nonNegative": "Must be 0 or more.",
+    "percent": "Must be between 0 and 100.",
+    "timeRange": "End time must be after start time.",
+    "dateRange": "End must be after start."
+  },
+  "staff": {
+    "title": "Staff",
+    "description": "Manage your team, their services, weekly shifts and time off.",
+    "new": "New staff member",
+    "empty": "No staff members yet.",
+    "columns": {
+      "member": "Member",
+      "jobTitle": "Title",
+      "services": "Services",
+      "status": "Status"
+    },
+    "servicesCount": "{count} services",
+    "form": {
+      "createTitle": "New staff member",
+      "editTitle": "Edit staff member",
+      "displayName": "Display name",
+      "jobTitle": "Job title",
+      "bio": "Bio",
+      "avatar": "Avatar",
+      "inviteEmail": "Invite by email",
+      "inviteHint": "Optional. An invitation email with a generated password is sent so the member can use the staff app.",
+      "active": "Active",
+      "created": "Staff member created.",
+      "updated": "Staff member updated."
+    },
+    "actions": {
+      "deactivate": "Deactivate",
+      "activate": "Activate",
+      "delete": "Delete"
+    },
+    "deleteTitle": "Delete staff member?",
+    "deleteDescription": "{name} will be removed from the salon. Existing bookings keep their history.",
+    "deleted": "Staff member deleted.",
+    "statusUpdated": "Status updated.",
+    "tabs": {
+      "profile": "Profile",
+      "services": "Services",
+      "shifts": "Shifts",
+      "timeOff": "Time off"
+    },
+    "backToList": "Back to staff",
+    "profile": {
+      "email": "Email",
+      "rating": "Rating",
+      "noBio": "No bio yet.",
+      "noEmail": "No login (not invited)"
+    },
+    "servicesTab": {
+      "description": "Select the services this member can perform. Customers can only book them for these services.",
+      "empty": "Create services first, then assign them here.",
+      "saved": "Services updated."
+    },
+    "shifts": {
+      "description": "Regular weekly working hours. Add several windows per day for split shifts.",
+      "addWindow": "Add window",
+      "noWindows": "Off",
+      "saved": "Shifts saved.",
+      "overlap": "Two windows on the same day overlap. Adjust the times and try again.",
+      "invalidRange": "Every window needs an end time after its start time."
+    },
+    "overrides": {
+      "title": "Overrides",
+      "description": "Change a single day: mark it as a day off or set custom hours.",
+      "date": "Date",
+      "dayOff": "Day off",
+      "customHours": "Custom hours",
+      "start": "Start",
+      "end": "End",
+      "add": "Add override",
+      "added": "Override added.",
+      "deleted": "Override removed.",
+      "sessionNote": "Overrides added in this session are listed below; the API does not list existing ones yet.",
+      "empty": "No overrides added in this session."
+    },
+    "timeOff": {
+      "title": "Time off",
+      "description": "Vacations and absences. Booked slots in this range become unavailable.",
+      "startAt": "From",
+      "endAt": "Until",
+      "reason": "Reason",
+      "add": "Add time off",
+      "added": "Time off added.",
+      "deleted": "Time off removed.",
+      "empty": "No time off recorded.",
+      "deleteTitle": "Remove time off?",
+      "localTimeHint": "Times are entered in your browser's timezone.",
+      "status": {
+        "PENDING": "Pending",
+        "APPROVED": "Approved",
+        "REJECTED": "Rejected"
+      }
+    }
+  },
+  "services": {
+    "title": "Services",
+    "description": "Categories and services with pricing, duration and ordering.",
+    "new": "New service",
+    "empty": "No services yet.",
+    "filterCategory": "Category",
+    "allCategories": "All categories",
+    "columns": {
+      "service": "Service",
+      "category": "Category",
+      "price": "Price",
+      "duration": "Duration",
+      "buffer": "Buffer",
+      "status": "Status"
+    },
+    "categories": {
+      "title": "Categories",
+      "description": "Group services; lower sort order appears first.",
+      "add": "Add category",
+      "name": "Name",
+      "sortOrder": "Order",
+      "empty": "No categories yet.",
+      "created": "Category created.",
+      "updated": "Category updated.",
+      "deleted": "Category deleted.",
+      "deleteTitle": "Delete category?",
+      "deleteDescription": "Services in this category keep existing but lose their category."
+    },
+    "form": {
+      "createTitle": "New service",
+      "editTitle": "Edit service",
+      "name": "Name",
+      "category": "Category",
+      "noCategory": "No category",
+      "description": "Description",
+      "duration": "Duration (minutes)",
+      "buffer": "Buffer after (minutes)",
+      "price": "Price",
+      "priceHint": "In {currency}, e.g. 45.00",
+      "image": "Image",
+      "active": "Active (bookable)",
+      "sortOrder": "Sort order",
+      "created": "Service created.",
+      "updated": "Service updated."
+    },
+    "deleteTitle": "Delete service?",
+    "deleteDescription": "{name} will be hidden from customers. Past bookings are kept.",
+    "deleted": "Service deleted.",
+    "statusUpdated": "Status updated."
+  },
+  "settings": {
+    "title": "Settings",
+    "description": "Salon profile, opening hours, booking rules, payments and gallery.",
+    "tabs": {
+      "profile": "Profile",
+      "hours": "Opening hours",
+      "rules": "Booking & payments",
+      "gallery": "Gallery"
+    },
+    "profile": {
+      "description": "Public information shown to customers in the app.",
+      "name": "Salon name",
+      "salonDescription": "Description",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "city": "City",
+      "country": "Country",
+      "lat": "Latitude",
+      "lng": "Longitude",
+      "timezone": "Timezone",
+      "currency": "Currency",
+      "cover": "Cover image",
+      "categories": "Categories",
+      "amenities": "Amenities",
+      "saved": "Profile saved.",
+      "status": "Status",
+      "statusValues": {
+        "PENDING": "Pending approval",
+        "ACTIVE": "Active",
+        "SUSPENDED": "Suspended"
+      }
+    },
+    "hours": {
+      "description": "When the salon is open. Staff shifts outside these hours are not bookable.",
+      "closed": "Closed",
+      "open": "Opens",
+      "close": "Closes",
+      "saved": "Opening hours saved.",
+      "invalidRange": "Closing time must be after opening time on every open day."
+    },
+    "rules": {
+      "description": "How customers can book and pay.",
+      "booking": "Booking rules",
+      "slotInterval": "Slot interval (minutes)",
+      "minAdvance": "Minimum advance (minutes)",
+      "maxAdvanceDays": "Maximum advance (days)",
+      "cancelDeadline": "Cancel deadline (minutes before)",
+      "autoConfirm": "Auto-confirm bookings",
+      "autoConfirmHint": "Off: new bookings stay pending until you confirm them.",
+      "deposit": "Deposit",
+      "requireDeposit": "Require a deposit",
+      "depositPercent": "Deposit (%)",
+      "payments": "Payment methods",
+      "acceptStripe": "Cards, Apple Pay, Google Pay (Stripe)",
+      "acceptPaypal": "PayPal",
+      "acceptCash": "Pay at the salon",
+      "saved": "Settings saved."
+    },
+    "gallery": {
+      "description": "Photos shown on the salon page. The first image appears first.",
+      "add": "Add images",
+      "empty": "No images yet.",
+      "saved": "Gallery saved.",
+      "uploading": "Uploading {count} images..."
+    },
+    "newSalon": {
+      "title": "Create a salon",
+      "description": "Fill in the profile; the platform team reviews new salons before they go live.",
+      "submit": "Create salon",
+      "created": "Salon created. It is pending approval by the platform team.",
+      "pendingNotice": "Your salon is pending approval. You can already set up staff, services and opening hours; customers will see it once it is approved.",
+      "reloginNotice": "Your account is now a salon owner. Please sign in again to refresh your permissions."
+    }
+  },
+  "promotions": {
+    "title": "Promotions",
+    "description": "Coupons customers redeem at checkout.",
+    "new": "New coupon",
+    "empty": "No coupons yet.",
+    "columns": {
+      "code": "Code",
+      "type": "Type",
+      "value": "Value",
+      "usage": "Usage",
+      "validity": "Validity",
+      "status": "Status"
+    },
+    "type": {
+      "PERCENT": "Percent",
+      "FIXED": "Fixed amount"
+    },
+    "unlimited": "unlimited",
+    "validity": {
+      "always": "Always",
+      "from": "from {date}",
+      "until": "until {date}"
+    },
+    "form": {
+      "createTitle": "New coupon",
+      "editTitle": "Edit coupon",
+      "code": "Code",
+      "codeHint": "Customers type this at checkout; letters and numbers only.",
+      "type": "Type",
+      "value": "Value",
+      "percentHint": "Percent off the order (0-100).",
+      "fixedHint": "Amount off in {currency}, e.g. 15.00",
+      "minOrder": "Minimum order",
+      "maxDiscount": "Maximum discount",
+      "usageLimit": "Total usage limit",
+      "perUserLimit": "Per-customer limit",
+      "startsAt": "Starts at",
+      "endsAt": "Ends at",
+      "active": "Active",
+      "created": "Coupon created.",
+      "updated": "Coupon updated."
+    },
+    "deleteTitle": "Delete coupon?",
+    "deleteDescription": "Customers can no longer redeem {code}.",
+    "deleted": "Coupon deleted."
   }
 }

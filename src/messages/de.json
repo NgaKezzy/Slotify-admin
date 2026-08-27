@@ -34,7 +34,33 @@
     "no": "Nein",
     "close": "Schließen",
     "back": "Zurück",
-    "optional": "Optional"
+    "optional": "Optional",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "add": "Hinzufügen",
+    "remove": "Entfernen",
+    "none": "Keine",
+    "saving": "Wird gespeichert...",
+    "moveUp": "Nach oben",
+    "moveDown": "Nach unten",
+    "notFound": "Nicht gefunden",
+    "upload": {
+      "choose": "Bild auswählen",
+      "uploading": "Wird hochgeladen...",
+      "remove": "Bild entfernen",
+      "failed": "Upload fehlgeschlagen: {message}"
+    },
+    "days": {
+      "MONDAY": "Montag",
+      "TUESDAY": "Dienstag",
+      "WEDNESDAY": "Mittwoch",
+      "THURSDAY": "Donnerstag",
+      "FRIDAY": "Freitag",
+      "SATURDAY": "Samstag",
+      "SUNDAY": "Sonntag"
+    },
+    "minutes": "{count} Min.",
+    "daysCount": "{count} Tage"
   },
   "theme": {
     "toggle": "Toggle theme",
@@ -350,5 +376,278 @@
     "rescheduled": "Buchung verschoben.",
     "slotUnavailable": "Dieser Termin ist nicht verfügbar – die Buchung wurde zurückgesetzt.",
     "error": "Der Kalender konnte nicht geladen werden."
+  },
+  "validation": {
+    "required": "Dieses Feld ist erforderlich.",
+    "invalidEmail": "Gib eine gültige E-Mail-Adresse ein.",
+    "positive": "Muss größer als 0 sein.",
+    "nonNegative": "Muss 0 oder mehr sein.",
+    "percent": "Muss zwischen 0 und 100 liegen.",
+    "timeRange": "Endzeit muss nach der Startzeit liegen.",
+    "dateRange": "Ende muss nach dem Start liegen."
+  },
+  "staff": {
+    "title": "Team",
+    "description": "Verwalte dein Team, dessen Leistungen, Wochenschichten und Abwesenheiten.",
+    "new": "Neues Teammitglied",
+    "empty": "Noch keine Teammitglieder.",
+    "columns": {
+      "member": "Mitglied",
+      "jobTitle": "Titel",
+      "services": "Leistungen",
+      "status": "Status"
+    },
+    "servicesCount": "{count} Leistungen",
+    "form": {
+      "createTitle": "Neues Teammitglied",
+      "editTitle": "Teammitglied bearbeiten",
+      "displayName": "Anzeigename",
+      "jobTitle": "Berufsbezeichnung",
+      "bio": "Über mich",
+      "avatar": "Profilbild",
+      "inviteEmail": "Per E-Mail einladen",
+      "inviteHint": "Optional. Es wird eine Einladung mit generiertem Passwort gesendet, damit das Mitglied die Staff-App nutzen kann.",
+      "active": "Aktiv",
+      "created": "Teammitglied angelegt.",
+      "updated": "Teammitglied aktualisiert."
+    },
+    "actions": {
+      "deactivate": "Deaktivieren",
+      "activate": "Aktivieren",
+      "delete": "Löschen"
+    },
+    "deleteTitle": "Teammitglied löschen?",
+    "deleteDescription": "{name} wird aus dem Salon entfernt. Bestehende Buchungen behalten ihre Historie.",
+    "deleted": "Teammitglied gelöscht.",
+    "statusUpdated": "Status aktualisiert.",
+    "tabs": {
+      "profile": "Profil",
+      "services": "Leistungen",
+      "shifts": "Schichten",
+      "timeOff": "Abwesenheit"
+    },
+    "backToList": "Zurück zum Team",
+    "profile": {
+      "email": "E-Mail",
+      "rating": "Bewertung",
+      "noBio": "Noch keine Beschreibung.",
+      "noEmail": "Kein Login (nicht eingeladen)"
+    },
+    "servicesTab": {
+      "description": "Wähle die Leistungen, die dieses Mitglied ausführt. Kunden können nur diese buchen.",
+      "empty": "Lege zuerst Leistungen an und weise sie dann hier zu.",
+      "saved": "Leistungen aktualisiert."
+    },
+    "shifts": {
+      "description": "Reguläre Wochenarbeitszeiten. Mehrere Zeitfenster pro Tag sind für geteilte Schichten möglich.",
+      "addWindow": "Zeitfenster hinzufügen",
+      "noWindows": "Frei",
+      "saved": "Schichten gespeichert.",
+      "overlap": "Zwei Zeitfenster am selben Tag überschneiden sich. Passe die Zeiten an und versuche es erneut.",
+      "invalidRange": "Jedes Zeitfenster braucht eine Endzeit nach der Startzeit."
+    },
+    "overrides": {
+      "title": "Ausnahmen",
+      "description": "Einen einzelnen Tag ändern: als frei markieren oder eigene Zeiten setzen.",
+      "date": "Datum",
+      "dayOff": "Freier Tag",
+      "customHours": "Eigene Zeiten",
+      "start": "Start",
+      "end": "Ende",
+      "add": "Ausnahme hinzufügen",
+      "added": "Ausnahme hinzugefügt.",
+      "deleted": "Ausnahme entfernt.",
+      "sessionNote": "In dieser Sitzung hinzugefügte Ausnahmen werden unten gelistet; die API liefert bestehende noch nicht.",
+      "empty": "In dieser Sitzung keine Ausnahmen hinzugefügt."
+    },
+    "timeOff": {
+      "title": "Abwesenheit",
+      "description": "Urlaub und Abwesenheiten. Termine in diesem Zeitraum sind nicht buchbar.",
+      "startAt": "Von",
+      "endAt": "Bis",
+      "reason": "Grund",
+      "add": "Abwesenheit hinzufügen",
+      "added": "Abwesenheit hinzugefügt.",
+      "deleted": "Abwesenheit entfernt.",
+      "empty": "Keine Abwesenheit erfasst.",
+      "deleteTitle": "Abwesenheit entfernen?",
+      "localTimeHint": "Zeiten werden in der Zeitzone deines Browsers eingegeben.",
+      "status": {
+        "PENDING": "Ausstehend",
+        "APPROVED": "Genehmigt",
+        "REJECTED": "Abgelehnt"
+      }
+    }
+  },
+  "services": {
+    "title": "Leistungen",
+    "description": "Kategorien und Leistungen mit Preis, Dauer und Reihenfolge.",
+    "new": "Neue Leistung",
+    "empty": "Noch keine Leistungen.",
+    "filterCategory": "Kategorie",
+    "allCategories": "Alle Kategorien",
+    "columns": {
+      "service": "Leistung",
+      "category": "Kategorie",
+      "price": "Preis",
+      "duration": "Dauer",
+      "buffer": "Puffer",
+      "status": "Status"
+    },
+    "categories": {
+      "title": "Kategorien",
+      "description": "Leistungen gruppieren; niedrigere Reihenfolge erscheint zuerst.",
+      "add": "Kategorie hinzufügen",
+      "name": "Name",
+      "sortOrder": "Reihenfolge",
+      "empty": "Noch keine Kategorien.",
+      "created": "Kategorie angelegt.",
+      "updated": "Kategorie aktualisiert.",
+      "deleted": "Kategorie gelöscht.",
+      "deleteTitle": "Kategorie löschen?",
+      "deleteDescription": "Leistungen dieser Kategorie bleiben bestehen, verlieren aber ihre Kategorie."
+    },
+    "form": {
+      "createTitle": "Neue Leistung",
+      "editTitle": "Leistung bearbeiten",
+      "name": "Name",
+      "category": "Kategorie",
+      "noCategory": "Keine Kategorie",
+      "description": "Beschreibung",
+      "duration": "Dauer (Minuten)",
+      "buffer": "Puffer danach (Minuten)",
+      "price": "Preis",
+      "priceHint": "In {currency}, z. B. 45,00",
+      "image": "Bild",
+      "active": "Aktiv (buchbar)",
+      "sortOrder": "Reihenfolge",
+      "created": "Leistung angelegt.",
+      "updated": "Leistung aktualisiert."
+    },
+    "deleteTitle": "Leistung löschen?",
+    "deleteDescription": "{name} wird für Kunden ausgeblendet. Vergangene Buchungen bleiben erhalten.",
+    "deleted": "Leistung gelöscht.",
+    "statusUpdated": "Status aktualisiert."
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "description": "Salonprofil, Öffnungszeiten, Buchungsregeln, Zahlungen und Galerie.",
+    "tabs": {
+      "profile": "Profil",
+      "hours": "Öffnungszeiten",
+      "rules": "Buchung & Zahlung",
+      "gallery": "Galerie"
+    },
+    "profile": {
+      "description": "Öffentliche Informationen, die Kunden in der App sehen.",
+      "name": "Salonname",
+      "salonDescription": "Beschreibung",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "address": "Adresse",
+      "city": "Stadt",
+      "country": "Land",
+      "lat": "Breitengrad",
+      "lng": "Längengrad",
+      "timezone": "Zeitzone",
+      "currency": "Währung",
+      "cover": "Titelbild",
+      "categories": "Kategorien",
+      "amenities": "Ausstattung",
+      "saved": "Profil gespeichert.",
+      "status": "Status",
+      "statusValues": {
+        "PENDING": "Freigabe ausstehend",
+        "ACTIVE": "Aktiv",
+        "SUSPENDED": "Gesperrt"
+      }
+    },
+    "hours": {
+      "description": "Wann der Salon geöffnet ist. Schichten außerhalb dieser Zeiten sind nicht buchbar.",
+      "closed": "Geschlossen",
+      "open": "Öffnet",
+      "close": "Schließt",
+      "saved": "Öffnungszeiten gespeichert.",
+      "invalidRange": "Die Schließzeit muss an jedem geöffneten Tag nach der Öffnungszeit liegen."
+    },
+    "rules": {
+      "description": "Wie Kunden buchen und bezahlen können.",
+      "booking": "Buchungsregeln",
+      "slotInterval": "Zeitraster (Minuten)",
+      "minAdvance": "Mindestvorlauf (Minuten)",
+      "maxAdvanceDays": "Maximaler Vorlauf (Tage)",
+      "cancelDeadline": "Stornofrist (Minuten vorher)",
+      "autoConfirm": "Buchungen automatisch bestätigen",
+      "autoConfirmHint": "Aus: neue Buchungen bleiben ausstehend, bis du sie bestätigst.",
+      "deposit": "Anzahlung",
+      "requireDeposit": "Anzahlung verlangen",
+      "depositPercent": "Anzahlung (%)",
+      "payments": "Zahlungsarten",
+      "acceptStripe": "Karten, Apple Pay, Google Pay (Stripe)",
+      "acceptPaypal": "PayPal",
+      "acceptCash": "Zahlung im Salon",
+      "saved": "Einstellungen gespeichert."
+    },
+    "gallery": {
+      "description": "Fotos auf der Salonseite. Das erste Bild erscheint zuerst.",
+      "add": "Bilder hinzufügen",
+      "empty": "Noch keine Bilder.",
+      "saved": "Galerie gespeichert.",
+      "uploading": "{count} Bilder werden hochgeladen..."
+    },
+    "newSalon": {
+      "title": "Salon anlegen",
+      "description": "Fülle das Profil aus; das Plattform-Team prüft neue Salons vor der Freischaltung.",
+      "submit": "Salon anlegen",
+      "created": "Salon angelegt. Er wartet auf Freigabe durch das Plattform-Team.",
+      "pendingNotice": "Dein Salon wartet auf Freigabe. Du kannst bereits Team, Leistungen und Öffnungszeiten einrichten; Kunden sehen ihn nach der Freigabe.",
+      "reloginNotice": "Dein Konto ist jetzt ein Salon-Inhaber-Konto. Bitte melde dich erneut an, um die Berechtigungen zu aktualisieren."
+    }
+  },
+  "promotions": {
+    "title": "Aktionen",
+    "description": "Gutscheine, die Kunden beim Bezahlen einlösen.",
+    "new": "Neuer Gutschein",
+    "empty": "Noch keine Gutscheine.",
+    "columns": {
+      "code": "Code",
+      "type": "Typ",
+      "value": "Wert",
+      "usage": "Nutzung",
+      "validity": "Gültigkeit",
+      "status": "Status"
+    },
+    "type": {
+      "PERCENT": "Prozent",
+      "FIXED": "Fester Betrag"
+    },
+    "unlimited": "unbegrenzt",
+    "validity": {
+      "always": "Immer",
+      "from": "ab {date}",
+      "until": "bis {date}"
+    },
+    "form": {
+      "createTitle": "Neuer Gutschein",
+      "editTitle": "Gutschein bearbeiten",
+      "code": "Code",
+      "codeHint": "Kunden geben diesen beim Bezahlen ein; nur Buchstaben und Zahlen.",
+      "type": "Typ",
+      "value": "Wert",
+      "percentHint": "Prozent Rabatt auf die Bestellung (0-100).",
+      "fixedHint": "Rabatt in {currency}, z. B. 15,00",
+      "minOrder": "Mindestbestellwert",
+      "maxDiscount": "Maximaler Rabatt",
+      "usageLimit": "Gesamtlimit",
+      "perUserLimit": "Limit pro Kunde",
+      "startsAt": "Beginn",
+      "endsAt": "Ende",
+      "active": "Aktiv",
+      "created": "Gutschein angelegt.",
+      "updated": "Gutschein aktualisiert."
+    },
+    "deleteTitle": "Gutschein löschen?",
+    "deleteDescription": "Kunden können {code} nicht mehr einlösen.",
+    "deleted": "Gutschein gelöscht."
   }
 }
