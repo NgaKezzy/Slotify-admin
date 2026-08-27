@@ -51,6 +51,31 @@ Browser ──▶ TanStack Query hook ──▶ `api` (openapi-fetch, src/lib/ap
 - Locale: no URL prefix; `src/i18n/request.ts` reads the `slotify-locale` cookie.
 - Theme: `next-themes` toggles the `.dark` class; tokens in `globals.css`.
 
+## Theming
+
+- **Three states**: the header toggle (`src/components/layout/theme-toggle.tsx`) offers
+  Light / Dark / System via `next-themes`, which stores the choice in `localStorage`
+  and sets the `.dark` class on `<html>` before hydration (`suppressHydrationWarning`
+  in `src/app/layout.tsx`), so there is no flash on load.
+- **Tokens** live in `src/app/globals.css`. The "Brand tokens" block defines the
+  primary/secondary colours, radius and the booking-status palette; the `.dark`
+  block right below overrides them. Semantic shadcn tokens (`--background`,
+  `--card`, `--chart-1..5`, ...) are derived from the brand tokens, so a rebrand
+  only touches that first block.
+- **Status colours** are used as badge text on a 15% tint of themselves and as
+  chart fills. Light values are dark enough for >= 4.5:1 contrast on white; dark
+  values are lifted for the same contrast on dark cards. Reuse them through
+  `text-status-*` / `bg-status-*` utilities and never hard-code hex values.
+- **Charts** (Recharts) read colours as CSS variables — `fill="var(--chart-1)"`,
+  `var(--status-completed)`, `var(--border)` for grid lines — and use the custom
+  `ChartTooltip` (`src/components/reports/chart-tooltip.tsx`) so tooltips follow
+  the theme too.
+- **Data-driven colours** (customer tags carry their own hex colour) are applied
+  through a CSS custom property (`--tag-color`) as a tint behind the theme
+  foreground text, which keeps them readable in both modes.
+- **Native controls** (`<input type="date">`, `<input type="color">`) pick up the
+  theme through `color-scheme` set on `html` / `html.dark`.
+
 ## Adding a new page / module
 
 1. **Route**: create `src/app/(dashboard)/<module>/page.tsx`. Export `generateMetadata`

@@ -1,23 +1,23 @@
 /**
- * Platform overview page (`/platform`): marketplace KPIs for SUPER_ADMIN.
+ * Platform categories page (`/platform/categories`): salon category CRUD.
  */
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 import { PageHeader } from "@/components/layout/page-header";
-import { PlatformOverview } from "@/components/platform/platform-overview";
+import { CategoriesList } from "@/components/platform/categories-list";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("platform.overview");
+  const t = await getTranslations("platform.catalog.categories");
   return { title: t("title") };
 }
 
-export default async function PlatformOverviewPage() {
-  const t = await getTranslations("platform.overview");
+export default async function CategoriesListPage() {
+  const t = await getTranslations("platform.catalog.categories");
   return (
     <div className="grid gap-6">
       <PageHeader title={t("title")} description={t("description")} />
-      <PlatformOverview />
+      <CategoriesList />
     </div>
   );
 }

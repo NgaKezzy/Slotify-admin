@@ -25,13 +25,18 @@
   /* Corner radius shared by all components (cards, inputs, buttons). */
   --brand-radius: 0.625rem;
 
-  /* Booking status colors — keep in sync with the mobile app theme. */
-  --status-pending: oklch(0.8 0.16 85); /* yellow */
-  --status-confirmed: oklch(0.62 0.17 255); /* blue */
-  --status-completed: oklch(0.68 0.18 150); /* green */
-  --status-cancelled: oklch(0.6 0.02 260); /* gray */
-  --status-rejected: oklch(0.6 0.22 25); /* red */
-  --status-no-show: oklch(0.72 0.18 50); /* orange */
+  /*
+   * Booking status colors — keep in sync with the mobile app theme.
+   * Used both as badge text (on a 15% tint of itself) and as chart fills, so the
+   * light values are dark enough for >= 4.5:1 contrast on white; the `.dark`
+   * block lifts them for the same contrast on dark cards.
+   */
+  --status-pending: oklch(0.58 0.14 80); /* amber */
+  --status-confirmed: oklch(0.52 0.17 255); /* blue */
+  --status-completed: oklch(0.52 0.15 150); /* green */
+  --status-cancelled: oklch(0.5 0.02 260); /* gray */
+  --status-rejected: oklch(0.55 0.2 25); /* red */
+  --status-no-show: oklch(0.56 0.16 50); /* orange */
 
   /* Semantic feedback colors. */
   --success: var(--status-completed);
@@ -42,6 +47,13 @@
   --brand-primary: oklch(0.72 0.15 290);
   --brand-primary-foreground: oklch(0.15 0.03 290);
   --brand-secondary: oklch(0.8 0.13 60);
+
+  --status-pending: oklch(0.85 0.15 85);
+  --status-confirmed: oklch(0.75 0.13 255);
+  --status-completed: oklch(0.78 0.16 150);
+  --status-cancelled: oklch(0.72 0.02 260);
+  --status-rejected: oklch(0.74 0.17 25);
+  --status-no-show: oklch(0.78 0.15 50);
 }
 
 /* ---------------------------------------------------------------------------
@@ -158,9 +170,10 @@
   --ring: var(--brand-primary);
   --chart-1: var(--brand-primary);
   --chart-2: var(--brand-secondary);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
+  /* Lighter neutrals so extra chart series stay visible on dark cards. */
+  --chart-3: oklch(0.75 0 0);
+  --chart-4: oklch(0.6 0 0);
+  --chart-5: oklch(0.45 0 0);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: var(--brand-primary);
@@ -180,5 +193,10 @@
   }
   html {
     @apply font-sans;
+    /* Native controls (date pickers, color inputs, scrollbars) follow the theme. */
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
   }
 }

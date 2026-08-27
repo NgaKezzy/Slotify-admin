@@ -1,16 +1,23 @@
 /**
- * Payments module page (`/payments`). Placeholder until the module is implemented in Phase 3.
+ * Payments module page (`/payments`): transaction list with refunds for the selected salon.
  */
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-import { ModulePlaceholder } from "@/components/layout/module-placeholder";
+import { PageHeader } from "@/components/layout/page-header";
+import { PaymentsTableModule } from "@/components/payments/payments-module";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("modules.payments");
   return { title: t("title") };
 }
 
-export default function PaymentsPage() {
-  return <ModulePlaceholder moduleKey="payments" />;
+export default async function PaymentsPage() {
+  const t = await getTranslations("modules.payments");
+  return (
+    <div className="grid gap-6">
+      <PageHeader title={t("title")} description={t("description")} />
+      <PaymentsTableModule />
+    </div>
+  );
 }

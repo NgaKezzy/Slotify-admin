@@ -172,5 +172,360 @@
   },
   "realtime": {
     "bookingEvent": "Buchung {code}: {status}"
+  },
+  "customers": {
+    "searchPlaceholder": "Nach Name, E-Mail oder Telefon suchen",
+    "empty": "Noch keine Kunden",
+    "columns": {
+      "customer": "Kunde",
+      "bookings": "Buchungen",
+      "completed": "Abgeschlossen",
+      "noShows": "Nicht erschienen",
+      "totalSpent": "Gesamtumsatz",
+      "lastVisit": "Letzter Besuch",
+      "tags": "Tags"
+    },
+    "detail": {
+      "title": "Kunde",
+      "backToList": "Alle Kunden",
+      "notFound": "Kunde nicht gefunden",
+      "contact": "Kontakt",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "firstVisit": "Erster Besuch",
+      "lastVisit": "Letzter Besuch",
+      "never": "Nie",
+      "stats": "Statistik",
+      "cancelled": "Storniert",
+      "recentBookings": "Letzte Buchungen",
+      "noBookings": "Noch keine Buchungen",
+      "service": "Leistung",
+      "staff": "Mitarbeiter",
+      "date": "Datum",
+      "total": "Gesamt"
+    },
+    "tags": {
+      "title": "Tags",
+      "manage": "Tags verwalten",
+      "noTags": "Keine Tags zugewiesen",
+      "noneDefined": "Noch keine Tags vorhanden. Legen Sie einen an, um Kunden zu kategorisieren.",
+      "assign": "Tags zuweisen",
+      "assigned": "Tags aktualisiert",
+      "dialogTitle": "Tags verwalten",
+      "dialogDescription": "Tags gelten für alle Kunden dieses Salons.",
+      "name": "Name",
+      "color": "Farbe",
+      "add": "Tag hinzufügen",
+      "created": "Tag erstellt",
+      "updated": "Tag aktualisiert",
+      "deleted": "Tag gelöscht",
+      "deleteTitle": "Tag löschen?",
+      "deleteDescription": "\"{name}\" wird von allen Kunden entfernt.",
+      "nameRequired": "Geben Sie einen Tag-Namen ein."
+    },
+    "notes": {
+      "title": "Notizen",
+      "empty": "Noch keine Notizen",
+      "placeholder": "Private Notiz zu diesem Kunden hinzufügen...",
+      "add": "Notiz hinzufügen",
+      "added": "Notiz hinzugefügt",
+      "deleted": "Notiz gelöscht",
+      "deleteTitle": "Notiz löschen?",
+      "deleteDescription": "Diese Notiz wird dauerhaft entfernt.",
+      "by": "von {author}"
+    }
+  },
+  "reviews": {
+    "empty": "Noch keine Bewertungen",
+    "summary": {
+      "average": "Durchschnittliche Bewertung",
+      "count": "{count, plural, =1 {1 Bewertung} other {# Bewertungen}}",
+      "distribution": "Verteilung der Bewertungen",
+      "stars": "{count, plural, =1 {1 Stern} other {# Sterne}}"
+    },
+    "filter": {
+      "all": "Alle",
+      "visible": "Sichtbar",
+      "hidden": "Ausgeblendet"
+    },
+    "visible": "Sichtbar",
+    "hidden": "Ausgeblendet",
+    "staff": "Mitarbeiter: {name}",
+    "booking": "Buchung {code}",
+    "ownerReply": "Ihre Antwort",
+    "reply": "Antworten",
+    "editReply": "Antwort bearbeiten",
+    "hide": "Ausblenden",
+    "show": "Einblenden",
+    "replyDialog": {
+      "title": "Auf Bewertung antworten",
+      "description": "Ihre Antwort ist öffentlich und wird unter der Bewertung angezeigt.",
+      "placeholder": "Vielen Dank für Ihr Feedback...",
+      "submit": "Antwort senden",
+      "required": "Geben Sie eine Antwort ein."
+    },
+    "replied": "Antwort gesendet",
+    "hiddenToast": "Bewertung ausgeblendet",
+    "shownToast": "Bewertung ist wieder sichtbar",
+    "rating": "{rating} von 5"
+  },
+  "payments": {
+    "empty": "Noch keine Zahlungen",
+    "columns": {
+      "booking": "Buchung",
+      "provider": "Anbieter",
+      "type": "Art",
+      "amount": "Betrag",
+      "refunded": "Erstattet",
+      "status": "Status",
+      "paidAt": "Bezahlt am"
+    },
+    "provider": {
+      "STRIPE": "Stripe",
+      "PAYPAL": "PayPal",
+      "CASH": "Bar"
+    },
+    "type": {
+      "FULL": "Vollzahlung",
+      "DEPOSIT": "Anzahlung"
+    },
+    "status": {
+      "PENDING": "Ausstehend",
+      "SUCCEEDED": "Erfolgreich",
+      "FAILED": "Fehlgeschlagen",
+      "REFUNDED": "Erstattet",
+      "PARTIAL_REFUND": "Teilweise erstattet"
+    },
+    "refund": "Erstatten",
+    "cashNotRefundable": "Barzahlungen werden im Salon abgewickelt und können hier nicht erstattet werden.",
+    "notRefundable": "Für diese Zahlung ist nichts mehr zu erstatten.",
+    "refundDialog": {
+      "title": "Zahlung erstatten",
+      "description": "Buchung {code} · erstattbar {amount}",
+      "amount": "Betrag",
+      "reason": "Grund",
+      "reasonPlaceholder": "Kunde hat storniert, Leistung nicht erbracht, ...",
+      "submit": "Erstatten",
+      "amountInvalid": "Geben Sie einen Betrag zwischen 0,01 und {max} ein.",
+      "reasonRequired": "Geben Sie einen Grund ein."
+    },
+    "refunded": "Erstattung veranlasst"
+  },
+  "reports": {
+    "period": {
+      "label": "Zeitraum",
+      "presets": {
+        "last7": "Letzte 7 Tage",
+        "last30": "Letzte 30 Tage",
+        "thisMonth": "Dieser Monat",
+        "lastMonth": "Letzter Monat",
+        "custom": "Benutzerdefiniert"
+      },
+      "granularity": "Gruppieren nach",
+      "DAY": "Tag",
+      "WEEK": "Woche",
+      "MONTH": "Monat"
+    },
+    "revenue": {
+      "title": "Umsatz",
+      "total": "Gesamtumsatz",
+      "bookings": "Abgeschlossene Buchungen",
+      "byMethod": "Nach Zahlungsart",
+      "topServices": "Top-Leistungen",
+      "service": "Leistung",
+      "revenue": "Umsatz",
+      "empty": "Kein Umsatz in diesem Zeitraum"
+    },
+    "bookingsChart": {
+      "title": "Buchungen nach Status",
+      "total": "Buchungen gesamt",
+      "empty": "Keine Buchungen in diesem Zeitraum"
+    },
+    "staff": {
+      "title": "Mitarbeiterleistung",
+      "name": "Mitarbeiter",
+      "bookings": "Buchungen",
+      "completed": "Abgeschlossen",
+      "noShows": "Nicht erschienen",
+      "revenue": "Umsatz",
+      "rating": "Bewertung",
+      "utilisation": "Auslastung",
+      "inactive": "Inaktiv",
+      "empty": "Keine Mitarbeiterdaten"
+    },
+    "export": {
+      "title": "Export",
+      "excel": "Excel",
+      "pdf": "PDF",
+      "revenue": "Umsatz",
+      "bookings": "Buchungen",
+      "staff": "Mitarbeiter",
+      "started": "Download gestartet",
+      "failed": "Export fehlgeschlagen"
+    }
+  },
+  "platform": {
+    "nav": {
+      "overview": "Übersicht",
+      "salons": "Salons",
+      "users": "Benutzer",
+      "categories": "Kategorien",
+      "amenities": "Ausstattung",
+      "payouts": "Auszahlungen",
+      "auditLogs": "Audit-Protokoll",
+      "backToDashboard": "Zurück zum Salon-Dashboard"
+    },
+    "overview": {
+      "title": "Plattform-Übersicht",
+      "description": "Zustand des gesamten Marktplatzes in den letzten 30 Tagen.",
+      "salons": "Salons",
+      "users": "Benutzer",
+      "bookings30": "Buchungen (30 Tage)",
+      "revenue30": "Umsatz (30 Tage)",
+      "topSalons": "Top-Salons nach Umsatz",
+      "salon": "Salon",
+      "completedBookings": "Abgeschlossene Buchungen",
+      "revenue": "Umsatz",
+      "noRevenue": "Noch kein Umsatz",
+      "salonStatus": {
+        "PENDING": "Ausstehend",
+        "ACTIVE": "Aktiv",
+        "SUSPENDED": "Gesperrt"
+      }
+    },
+    "salons": {
+      "title": "Salons",
+      "description": "Neue Salons freigeben, auffällige sperren und die Plattform-Provision festlegen.",
+      "empty": "Keine Salons",
+      "columns": {
+        "salon": "Salon",
+        "location": "Standort",
+        "rating": "Bewertung",
+        "status": "Status"
+      },
+      "approve": "Freigeben",
+      "suspend": "Sperren",
+      "commission": "Provision",
+      "approved": "Salon freigegeben",
+      "suspended": "Salon gesperrt",
+      "suspendTitle": "Salon sperren?",
+      "suspendDescription": "\"{name}\" verschwindet aus der Kunden-App und nimmt keine Buchungen mehr an.",
+      "commissionDialog": {
+        "title": "Plattform-Provision",
+        "description": "Anteil des Online-Umsatzes, den die Plattform bei {name} einbehält.",
+        "percent": "Provision (%)",
+        "invalid": "Geben Sie einen Prozentsatz zwischen 0 und 100 ein.",
+        "saved": "Provision gespeichert"
+      }
+    },
+    "users": {
+      "title": "Benutzer",
+      "description": "Alle Konten der Plattform: Inhaber, Mitarbeiter und Kunden.",
+      "searchPlaceholder": "Nach Name oder E-Mail suchen",
+      "empty": "Keine Benutzer",
+      "columns": {
+        "user": "Benutzer",
+        "role": "Rolle",
+        "status": "Status",
+        "provider": "Anmeldung",
+        "createdAt": "Registriert"
+      },
+      "role": {
+        "SUPER_ADMIN": "Super-Admin",
+        "SALON_OWNER": "Saloninhaber",
+        "STAFF": "Mitarbeiter",
+        "CUSTOMER": "Kunde"
+      },
+      "status": {
+        "ACTIVE": "Aktiv",
+        "SUSPENDED": "Gesperrt",
+        "DELETED": "Gelöscht"
+      },
+      "provider": {
+        "LOCAL": "E-Mail",
+        "GOOGLE": "Google"
+      },
+      "suspend": "Sperren",
+      "activate": "Aktivieren",
+      "changeRole": "Rolle ändern",
+      "suspended": "Benutzer gesperrt",
+      "activated": "Benutzer aktiviert",
+      "suspendTitle": "Benutzer sperren?",
+      "suspendDescription": "{name} wird abgemeldet und kann sich bis zur Reaktivierung nicht anmelden.",
+      "roleDialog": {
+        "title": "Rolle ändern",
+        "description": "Neue Rolle für {name} auswählen.",
+        "role": "Rolle",
+        "saved": "Rolle aktualisiert"
+      }
+    },
+    "catalog": {
+      "categories": {
+        "title": "Kategorien",
+        "description": "Salon-Kategorien, die als Filter in der Kunden-App erscheinen.",
+        "add": "Kategorie hinzufügen",
+        "name": "Name",
+        "iconUrl": "Icon-URL",
+        "sortOrder": "Sortierung",
+        "empty": "Noch keine Kategorien"
+      },
+      "amenities": {
+        "title": "Ausstattung",
+        "description": "Ausstattungsmerkmale, die Salons angeben können (WLAN, Parkplatz, ...).",
+        "add": "Merkmal hinzufügen",
+        "name": "Name",
+        "icon": "Icon-Name",
+        "empty": "Noch keine Ausstattung"
+      },
+      "editTitle": "Bearbeiten",
+      "createTitle": "Erstellen",
+      "nameRequired": "Geben Sie einen Namen ein.",
+      "created": "Erstellt",
+      "updated": "Aktualisiert",
+      "deleted": "Gelöscht",
+      "deleteTitle": "\"{name}\" löschen?",
+      "deleteDescription": "Salons, die es verwenden, verlieren die Zuordnung."
+    },
+    "payouts": {
+      "title": "Auszahlungen",
+      "description": "Online-Umsatz je Salon, Plattform-Provision und auszuzahlender Betrag.",
+      "empty": "Keine Salons in diesem Zeitraum",
+      "columns": {
+        "salon": "Salon",
+        "commission": "Provision %",
+        "onlineRevenue": "Online-Umsatz",
+        "commissionAmount": "Provision",
+        "payout": "Auszahlung",
+        "cash": "Bar (im Salon)"
+      },
+      "export": "Excel exportieren"
+    },
+    "auditLogs": {
+      "title": "Audit-Protokoll",
+      "description": "Wer hat was geändert – über alle Salons hinweg.",
+      "empty": "Keine Einträge",
+      "entityPlaceholder": "Entität (z. B. booking)",
+      "allActions": "Alle Aktionen",
+      "columns": {
+        "when": "Zeitpunkt",
+        "action": "Aktion",
+        "entity": "Entität",
+        "actor": "Akteur",
+        "salon": "Salon",
+        "diff": "Änderungen"
+      },
+      "action": {
+        "BOOKING_CREATED": "Buchung erstellt",
+        "BOOKING_STATUS_CHANGED": "Buchungsstatus geändert",
+        "BOOKING_RESCHEDULED": "Buchung verschoben",
+        "PAYMENT_REFUNDED": "Zahlung erstattet",
+        "SALON_UPDATED": "Salon aktualisiert",
+        "SALON_SETTINGS_UPDATED": "Salon-Einstellungen aktualisiert",
+        "SALON_STATUS_CHANGED": "Salon-Status geändert",
+        "STAFF_UPDATED": "Mitarbeiter aktualisiert",
+        "USER_STATUS_CHANGED": "Benutzerstatus geändert",
+        "USER_DELETED": "Benutzer gelöscht"
+      }
+    }
   }
 }

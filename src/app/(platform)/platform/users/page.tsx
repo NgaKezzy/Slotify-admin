@@ -1,23 +1,23 @@
 /**
- * Platform overview page (`/platform`): marketplace KPIs for SUPER_ADMIN.
+ * Platform users page (`/platform/users`): user directory with status and role management.
  */
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 import { PageHeader } from "@/components/layout/page-header";
-import { PlatformOverview } from "@/components/platform/platform-overview";
+import { PlatformUsersTable } from "@/components/platform/platform-users-table";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("platform.overview");
+  const t = await getTranslations("platform.users");
   return { title: t("title") };
 }
 
-export default async function PlatformOverviewPage() {
-  const t = await getTranslations("platform.overview");
+export default async function PlatformUsersTablePage() {
+  const t = await getTranslations("platform.users");
   return (
     <div className="grid gap-6">
       <PageHeader title={t("title")} description={t("description")} />
-      <PlatformOverview />
+      <PlatformUsersTable />
     </div>
   );
 }
