@@ -27,16 +27,13 @@ pnpm dev                     # http://localhost:3000
 
 ## Default accounts
 
-Backend demo data (seeded on first start). Password `Password123!` unless the
-backend was configured otherwise:
+Backend demo data (seeded on first start). Password `admin123` (the backend's
+`DEMO_ADMIN_PASSWORD`):
 
 | Login                           | Role        | Where it lands                   |
 | ------------------------------- | ----------- | -------------------------------- |
+| `admin@admin.com`               | SUPER_ADMIN | Platform area (`/platform`)      |
 | `owner@slotify.demo`            | SALON_OWNER | Salon dashboard (Glow & Go, Serenity Spa) |
-| `admin@slotify.demo`            | SUPER_ADMIN | Platform area (`/platform`)      |
-
-When the backend was set up with `scripts/setup.*`, the super admin is
-`admin@admin.com` / `admin` and every demo account uses password `admin`.
 
 ## Announcements (push to the apps)
 

@@ -4,7 +4,7 @@
 must not be edited by hand.
 
 ```bash
-# Backend must be running on http://localhost:8080 (springdoc exposes /v3/api-docs)
+# Backend must be running on http://localhost:8081 (springdoc exposes /v3/api-docs)
 pnpm gen:api
 ```
 
