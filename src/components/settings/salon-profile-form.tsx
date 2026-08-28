@@ -30,23 +30,27 @@ import {
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { SearchableSelect } from "@/components/ui/searchable-select";
 import { Textarea } from "@/components/ui/textarea";
 import type { SalonDetail } from "@/hooks/use-salons";
 import { useAmenities, useGlobalCategories, type SalonInput } from "@/hooks/use-settings";
 import { UploadFolders } from "@/lib/upload";
-import { optionalEmail, optionalString, requiredString, useFieldError } from "@/lib/validation";
+import {
+  optionalEmail,
+  optionalString,
+  requiredString,
+  useFieldError,
+  ValidationKeys,
+} from "@/lib/validation";
 
-/** Optional coordinate: empty input becomes undefined. */
-const optionalCoordinate = z
-  .union([z.literal(""), z.coerce.number<string | number>()])
-  .transform((value) => (value === "" ? undefined : value));
+/** Optional coordinate within `±limit`: empty input becomes undefined. */
+const optionalCoordinate = (limit: number, message: string) =>
+  z
+    .union([
+      z.literal(""),
+      z.coerce.number<string | number>().min(-limit, message).max(limit, message),
+    ])
+    .transform((value) => (value === "" ? undefined : value));
 
 const formSchema = z.object({
   name: requiredString,
@@ -56,8 +60,8 @@ const formSchema = z.object({
   address: requiredString,
   city: requiredString,
   country: requiredString,
-  lat: optionalCoordinate,
-  lng: optionalCoordinate,
+  lat: optionalCoordinate(90, ValidationKeys.latRange),
+  lng: optionalCoordinate(180, ValidationKeys.lngRange),
   timezone: requiredString,
   currency: requiredString,
   coverUrl: z.string().optional(),
@@ -138,18 +142,14 @@ export function SalonProfileForm({
       control={control}
       name={name}
       render={({ field }) => (
-        <Select value={field.value} onValueChange={(v) => field.onChange(v ?? "")} items={items}>
-          <SelectTrigger id={id} className="w-full" aria-invalid={Boolean(errors[name])}>
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent>
-            {items.map((item) => (
-              <SelectItem key={item.value} value={item.value}>
-                {item.label}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+        <SearchableSelect
+          id={id}
+          value={field.value}
+          onValueChange={field.onChange}
+          options={items}
+          disabled={isPending}
+          aria-invalid={Boolean(errors[name])}
+        />
       )}
     />
   );

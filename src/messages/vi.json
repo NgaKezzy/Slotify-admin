@@ -49,7 +49,11 @@
       "choose": "Chọn ảnh",
       "uploading": "Đang tải lên...",
       "remove": "Gỡ ảnh",
-      "failed": "Tải lên thất bại: {message}"
+      "failed": "Tải lên thất bại: {message}",
+      "change": "Đổi ảnh",
+      "dropHint": "Nhấn để chọn hoặc kéo thả ảnh vào đây",
+      "formats": "JPG, PNG hoặc WebP",
+      "invalidType": "Vui lòng chọn ảnh JPG, PNG hoặc WebP"
     },
     "days": {
       "MONDAY": "Thứ Hai",
@@ -385,7 +389,9 @@
     "nonNegative": "Phải từ 0 trở lên.",
     "percent": "Phải nằm trong khoảng 0 đến 100.",
     "timeRange": "Giờ kết thúc phải sau giờ bắt đầu.",
-    "dateRange": "Thời điểm kết thúc phải sau thời điểm bắt đầu."
+    "dateRange": "Thời điểm kết thúc phải sau thời điểm bắt đầu.",
+    "latRange": "Vĩ độ phải nằm trong khoảng -90 đến 90.",
+    "lngRange": "Kinh độ phải nằm trong khoảng -180 đến 180."
   },
   "staff": {
     "title": "Nhân viên",
@@ -851,7 +857,8 @@
       "amenities": "Tiện ích",
       "payouts": "Thanh toán cho salon",
       "auditLogs": "Nhật ký hệ thống",
-      "backToDashboard": "Về tổng quan salon"
+      "backToDashboard": "Về tổng quan salon",
+      "notifications": "Thông báo"
     },
     "overview": {
       "title": "Tổng quan nền tảng",
@@ -1003,6 +1010,31 @@
         "STAFF_UPDATED": "Cập nhật nhân viên",
         "USER_STATUS_CHANGED": "Đổi trạng thái người dùng",
         "USER_DELETED": "Xoá người dùng"
+      }
+    },
+    "notifications": {
+      "title": "Thông báo",
+      "description": "Gửi thông báo đẩy tới ứng dụng di động – khách hàng, nhân viên hoặc tất cả.",
+      "composeTitle": "Thông báo mới",
+      "composeDescription": "Được gửi dưới dạng thông báo đẩy và lưu trong danh sách thông báo trong ứng dụng của mỗi người nhận. Hãy viết bằng ngôn ngữ của người dùng.",
+      "audience": {
+        "label": "Gửi tới",
+        "ALL": "Tất cả (khách hàng và nhân viên)",
+        "CUSTOMERS": "Chỉ khách hàng",
+        "STAFF": "Chỉ nhân viên"
+      },
+      "titleLabel": "Tiêu đề",
+      "titlePlaceholder": "VD: Giảm 20% cuối tuần này",
+      "bodyLabel": "Nội dung",
+      "bodyPlaceholder": "Bạn muốn nhắn gì tới họ?",
+      "send": "Gửi thông báo",
+      "sending": "Đang gửi…",
+      "sent": "Đã gửi tới {count, plural, =0 {0 người dùng} =1 {1 người dùng} other {# người dùng}}.",
+      "errors": {
+        "titleRequired": "Vui lòng nhập tiêu đề",
+        "titleTooLong": "Tiêu đề quá dài",
+        "bodyRequired": "Vui lòng nhập nội dung",
+        "bodyTooLong": "Nội dung quá dài"
       }
     }
   }

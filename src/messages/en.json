@@ -49,7 +49,11 @@
       "choose": "Choose image",
       "uploading": "Uploading...",
       "remove": "Remove image",
-      "failed": "Upload failed: {message}"
+      "failed": "Upload failed: {message}",
+      "change": "Change image",
+      "dropHint": "Click to choose or drag an image here",
+      "formats": "JPG, PNG or WebP",
+      "invalidType": "Please choose a JPG, PNG or WebP image"
     },
     "days": {
       "MONDAY": "Monday",
@@ -385,7 +389,9 @@
     "nonNegative": "Must be 0 or more.",
     "percent": "Must be between 0 and 100.",
     "timeRange": "End time must be after start time.",
-    "dateRange": "End must be after start."
+    "dateRange": "End must be after start.",
+    "latRange": "Latitude must be between -90 and 90.",
+    "lngRange": "Longitude must be between -180 and 180."
   },
   "staff": {
     "title": "Staff",

@@ -5,13 +5,29 @@
  * next to the page content): one link per platform screen plus a link back to
  * the salon dashboard.
  */
-import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
+import { ArrowLeft, Loader2 } from "lucide-react";
+import Link, { useLinkStatus } from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 
-import { PLATFORM_NAV_ITEMS } from "@/components/layout/platform-nav-config";
+import {
+  PLATFORM_NAV_ITEMS,
+  type PlatformNavItem,
+} from "@/components/layout/platform-nav-config";
 import { cn } from "@/lib/utils";
+
+/**
+ * Spinner shown in place of the item icon while the navigation triggered by
+ * its parent `Link` is pending, giving immediate feedback on click.
+ */
+function NavIcon({ icon: Icon }: { icon: PlatformNavItem["icon"] }) {
+  const { pending } = useLinkStatus();
+  return pending ? (
+    <Loader2 className="size-4 animate-spin" aria-hidden />
+  ) : (
+    <Icon className="size-4" aria-hidden />
+  );
+}
 
 export function PlatformNav() {
   const t = useTranslations("platform.nav");
@@ -34,7 +50,7 @@ export function PlatformNav() {
                   : "text-muted-foreground"
               )}
             >
-              <item.icon className="size-4" />
+              <NavIcon icon={item.icon} />
               {t(item.key)}
             </Link>
           </li>

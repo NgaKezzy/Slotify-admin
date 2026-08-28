@@ -49,7 +49,11 @@
       "choose": "Bild auswählen",
       "uploading": "Wird hochgeladen...",
       "remove": "Bild entfernen",
-      "failed": "Upload fehlgeschlagen: {message}"
+      "failed": "Upload fehlgeschlagen: {message}",
+      "change": "Bild ändern",
+      "dropHint": "Klicken oder Bild hierher ziehen",
+      "formats": "JPG, PNG oder WebP",
+      "invalidType": "Bitte ein JPG-, PNG- oder WebP-Bild auswählen"
     },
     "days": {
       "MONDAY": "Montag",
@@ -385,7 +389,9 @@
     "nonNegative": "Muss 0 oder mehr sein.",
     "percent": "Muss zwischen 0 und 100 liegen.",
     "timeRange": "Endzeit muss nach der Startzeit liegen.",
-    "dateRange": "Ende muss nach dem Start liegen."
+    "dateRange": "Ende muss nach dem Start liegen.",
+    "latRange": "Der Breitengrad muss zwischen -90 und 90 liegen.",
+    "lngRange": "Der Längengrad muss zwischen -180 und 180 liegen."
   },
   "staff": {
     "title": "Team",

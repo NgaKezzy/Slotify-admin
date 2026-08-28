@@ -16,6 +16,8 @@ export const ValidationKeys = {
   percent: "percent",
   timeRange: "timeRange",
   dateRange: "dateRange",
+  latRange: "latRange",
+  lngRange: "lngRange",
 } as const;
 
 type ValidationKey = (typeof ValidationKeys)[keyof typeof ValidationKeys];
